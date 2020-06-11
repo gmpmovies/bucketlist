@@ -64,7 +64,7 @@ if(count($feed) >= 1){
                         </div>
                         <div class="feed-video-container">
                             <div class="feed-video-thumbnail-container">
-                                <img class="feed-video-play-button" src="/assets/icons/play-button.svg"/>
+                                <img class="feed-video-play-button" src="/bucketlist/assets/icons/play-button.svg"/>
                                 <div class="feed-video-dark"></div>
                                 <img class="feed-image" src="/uploads/' . $unique_post->get_Content()->get_File()->get_filename() . '"/>
                             </div>
@@ -93,7 +93,7 @@ if(count($feed) >= 1){
                             <div class="feed-image-container">
                                 <div class="feed-expand-container" data-postid="unique-post-' . $unique_post_id . '">
                                     <div class="feed-expand-icon-container"></div>
-                                    <img class="feed-expand-icon" src="/assets/icons/expand.svg">
+                                    <img class="feed-expand-icon" src="/bucketlist/assets/icons/expand.svg">
                                 </div>
                                 <img class="feed-image" src="/uploads/' . $unique_post->get_Content()->get_File()->get_filename() . '"/>
                             </div>

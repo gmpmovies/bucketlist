@@ -42,7 +42,7 @@
 </div>
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
-<script src="/assets/scripts/infinite-feed-scroll.js"></script>
+<script src="/bucketlist/assets/scripts/infinite-feed-scroll.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

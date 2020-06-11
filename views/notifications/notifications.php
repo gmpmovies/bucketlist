@@ -11,7 +11,7 @@
     <head>
         <title>Bucket</title>
         <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
-        <link rel="stylesheet" href="/assets/styles/notifications.css">
+        <link rel="stylesheet" href="/bucketlist/assets/styles/notifications.css">
     </head>
     <body>
         <?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
-        <script src="/assets/scripts/notification.js"></script>
+        <script src="/bucketlist/assets/scripts/notification.js"></script>
     </body>
 </html>
 

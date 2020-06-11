@@ -2,7 +2,7 @@
 
 ?>
 
-<link rel="stylesheet" href="/assets/styles/feed.css">
+<link rel="stylesheet" href="/bucketlist/assets/styles/feed.css">
 
 <div class="infinite-feed-container"></div>
 
@@ -18,7 +18,7 @@
             </a>
         </p>
         <div style="text-align: center;">
-            <img src="/assets/icons/Blocks-1s-200px.svg" style="width: 100px"/>
+            <img src="/bucketlist/assets/icons/Blocks-1s-200px.svg" style="width: 100px"/>
         </div>
 
     </div>

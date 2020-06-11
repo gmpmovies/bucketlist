@@ -29,10 +29,10 @@
                     <div class="photo-option-container">
                         <div class="row">
                             <div class="col-4 photo-selection" id="js-photo-selection" style="border-right: #999 solid 1px;">
-                                <img class="post-camera-icon" src="/assets/icons/photo-camera.svg" />
+                                <img class="post-camera-icon" src="/bucketlist/assets/icons/photo-camera.svg" />
                             </div>
                             <div class="col-4 photo-selection" id="js-video-selection" style="border-right: #999 solid 1px;">
-                                <img class="post-camera-icon" src="/assets/icons/video-camera.svg" />
+                                <img class="post-camera-icon" src="/bucketlist/assets/icons/video-camera.svg" />
                             </div>
                             <div class="col-4 photo-selection">
 

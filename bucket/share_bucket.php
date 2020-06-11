@@ -101,7 +101,7 @@ $temp = array();
 </div>
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
-<script src="/assets/scripts/share_bucket.js"></script>
+<script src="/bucketlist/assets/scripts/share_bucket.js"></script>
 </body>
 </html>
 

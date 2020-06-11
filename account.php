@@ -120,7 +120,7 @@ error_log("I AM WRITING SOMETHING NEW HERE");
         </div>
 
         <div class="col-md-8">
-            <link rel="stylesheet" href="/assets/styles/feed.css">
+            <link rel="stylesheet" href="/bucketlist/assets/styles/feed.css">
             <div class="infinite-feed-container"></div>
             <div class="feed-post-container" style="padding: 20px;">
                 <div class="feed-text-height feed-loading-indicator">
@@ -133,7 +133,7 @@ error_log("I AM WRITING SOMETHING NEW HERE");
                         </a>
                     </p>
                     <div style="text-align: center;">
-                        <img src="/assets/icons/Blocks-1s-200px.svg" style="width: 100px"/>
+                        <img src="/bucketlist/assets/icons/Blocks-1s-200px.svg" style="width: 100px"/>
                     </div>
 
                 </div>
@@ -147,8 +147,8 @@ error_log("I AM WRITING SOMETHING NEW HERE");
 </div>
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
-<script src="/assets/scripts/populate-followers-modal.js"></script>
-<script src="/assets/scripts/infinite-feed-scroll.js"></script>
+<script src="/bucketlist/assets/scripts/populate-followers-modal.js"></script>
+<script src="/bucketlist/assets/scripts/infinite-feed-scroll.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

@@ -5,13 +5,13 @@
         $display_back_nav=False;
     }
 ?>
-<link rel="stylesheet" href="/assets/styles/navbar-mobile.css">
+<link rel="stylesheet" href="/bucketlist/assets/styles/navbar-mobile.css">
 <div class="navbar-mobile-container-top">
     <?php
     if($display_back_nav == True){
         echo'
         <a href="' . $referer . '">
-            <img class="navbar-back-arrow" src="/assets/icons/back.svg"/>
+            <img class="navbar-back-arrow" src="/bucketlist/assets/icons/back.svg"/>
         </a>
         ';
     }

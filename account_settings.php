@@ -28,7 +28,7 @@ foreach($all_images as $key=>$image){
 <head>
     <title>Bucket</title>
     <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
-    <link rel="stylesheet" href="/assets/styles/upload-file.css">
+    <link rel="stylesheet" href="/bucketlist/assets/styles/upload-file.css">
 </head>
 <body>
 <?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
@@ -91,7 +91,7 @@ foreach($all_images as $key=>$image){
 
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
-<script src="/assets/scripts/upload-file.js"></script>
+<script src="/bucketlist/assets/scripts/upload-file.js"></script>
 </body>
 </html>
 

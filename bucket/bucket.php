@@ -26,8 +26,8 @@
 <head>
     <title>Bucket</title>
     <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
-    <link rel="stylesheet" href="/assets/styles/upload-file.css">
-    <link rel="stylesheet" href="/assets/styles/bucket.css">
+    <link rel="stylesheet" href="/bucketlist/assets/styles/upload-file.css">
+    <link rel="stylesheet" href="/bucketlist/assets/styles/bucket.css">
 </head>
 <body>
 
@@ -166,7 +166,7 @@
 </div>
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
-<script src="/assets/scripts/modal.js"></script>
+<script src="/bucketlist/assets/scripts/modal.js"></script>
 </body>
 </body>
 </html>
