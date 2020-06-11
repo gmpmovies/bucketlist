@@ -56,7 +56,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     if($stmt->fetch()) {
                         if(password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
-                            ini_set('session.cookie_lifetime', 60 * 60 * 24 * 7);
                             session_start();
 
                             // Store data in session variables
@@ -68,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["email"] = $email;
 
                             // Redirect user to welcome page
-                            header("location: /feed.php");
+                            header("location: /bucketlist/feed.php");
                         } else {
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
@@ -126,9 +125,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 </body>
-<footer>
-    <div style="text-align: center;">
-        <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=XQAmFujOlCPX5aXIpb7Vf0eGBwWWSCobORzzjjg0r5lzKMrEtaoadLJGPrd0"></script></span>
-    </div>
-</footer>
+
 </html>
