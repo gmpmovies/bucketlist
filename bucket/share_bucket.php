@@ -2,14 +2,14 @@
 error_reporting(E_ALL);
 session_start();
 
-require_once "/var/www/html/bucketlist/config.php";
-require_once "/var/www/html/bucketlist/pageload.php";
-require_once "/var/www/html/bucketlist/bucket/verify_bucket.php";
-require_once "/var/www/html/bucketlist/bucket/add_listitem.php";
-require_once "/var/www/html/bucketlist/models/listitem.php";
-require_once "/var/www/html/bucketlist/models/followers.php";
-require_once "/var/www/html/bucketlist/models/bucket_users.php";
-require_once "/var/www/html/bucketlist/models/bucket.php";
+require_once "/home1/gobinitc/public_html/bucketlist/config.php";
+require_once "/home1/gobinitc/public_html/bucketlist/pageload.php";
+require_once "/home1/gobinitc/public_html/bucketlist/bucket/verify_bucket.php";
+require_once "/home1/gobinitc/public_html/bucketlist/bucket/add_listitem.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/listitem.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/followers.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/bucket_users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/bucket.php";
 
 $bucket = Bucket::getBucket($bucket_id);
 $members = Bucket_Users::getBucketMembers($bucket_id, $bucket->get_ownerid());
@@ -23,11 +23,11 @@ $temp = array();
 <html lang="en">
 <head>
     <title>Bucket</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
 
 </head>
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 <div class="default-margin">
     <div class="row">
         <div class="col-md-4 col-sm-12">
@@ -100,7 +100,7 @@ $temp = array();
 
 </div>
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 <script src="/assets/scripts/share_bucket.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@ session_start();
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 
-require_once "/var/www/html/bucketlist/resize-image.php";
-require_once "/var/www/html/bucketlist/config.php";
+require_once "/home1/gobinitc/public_html/bucketlist/resize-image.php";
+require_once "/home1/gobinitc/public_html/bucketlist/config.php";
 
 class UploadImage{
 

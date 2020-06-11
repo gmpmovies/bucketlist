@@ -1,5 +1,5 @@
 <?php
-    require_once "/var/www/html/bucketlist/config.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/config.php";
 
     class UpdateCounts{
         private $type;

@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once "/var/www/html/bucketlist/models/bucket.php";
-require_once "/var/www/html/bucketlist/models/users.php";
-require_once "/var/www/html/bucketlist/models/bucket_users.php";
-require_once "/var/www/html/bucketlist/pageload.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/bucket.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/bucket_users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/pageload.php";
 
 error_reporting(E_ALL);
 $buckets = Bucket_Users::GetAllBucketsForUser($_SESSION['id']);

@@ -1,9 +1,9 @@
 <?php
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
-require_once ("/var/www/html/bucketlist/models/bucket_users.php");
-require_once ("/var/www/html/bucketlist/models/notifications.php");
-require_once ("/var/www/html/bucketlist/models/users.php");
+require_once ("/home1/gobinitc/public_html/bucketlist/models/bucket_users.php");
+require_once ("/home1/gobinitc/public_html/bucketlist/models/notifications.php");
+require_once ("/home1/gobinitc/public_html/bucketlist/models/users.php");
 
 $bucket_id = $_GET["bucketid"];
 $item_name = $item_desc = "";

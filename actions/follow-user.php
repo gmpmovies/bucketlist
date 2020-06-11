@@ -1,9 +1,9 @@
 <?php
     session_start();
-    require_once ("/var/www/html/bucketlist/config.php");
-    require_once ("/var/www/html/bucketlist/pageload.php");
-    require_once ("/var/www/html/bucketlist/models/followers.php");
-    require_once ("/var/www/html/bucketlist/actions/update_counts.php");
+    require_once ("/home1/gobinitc/public_html/bucketlist/config.php");
+    require_once ("/home1/gobinitc/public_html/bucketlist/pageload.php");
+    require_once ("/home1/gobinitc/public_html/bucketlist/models/followers.php");
+    require_once ("/home1/gobinitc/public_html/bucketlist/actions/update_counts.php");
     $following_id = $_POST['userid'];
     $user_id = $_SESSION['id'];
     $unfollowed = 0;

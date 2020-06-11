@@ -1,7 +1,7 @@
 <?php
-    require_once "/var/www/html/bucketlist/models/users.php";
-    require_once "/var/www/html/bucketlist/models/followers.php";
-    require_once "/var/www/html/bucketlist/config.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/models/users.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/models/followers.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/config.php";
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     $search_results = array();

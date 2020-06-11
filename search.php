@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once "/var/www/html/bucketlist/config.php";
-require_once "/var/www/html/bucketlist/pageload.php";
-require_once "/var/www/html/bucketlist/models/users.php";
-require_once "/var/www/html/bucketlist/models/followers.php";
+require_once "/home1/gobinitc/public_html/bucketlist/config.php";
+require_once "/home1/gobinitc/public_html/bucketlist/pageload.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/followers.php";
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 $search_results = array();
@@ -57,11 +57,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <head>
     <title>Bucket</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
 
 </head>
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 <div class="default-margin">
     <div class="row">
         <div class="search-container">
@@ -111,6 +111,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </div>
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 </body>
 </html>

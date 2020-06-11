@@ -1,5 +1,5 @@
 <?php
-require_once "/var/www/html/bucketlist/models/followers.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/followers.php";
 #Get all followers
 $followers = Followers::getAllFollowers($account_id, False);
 #Get all following

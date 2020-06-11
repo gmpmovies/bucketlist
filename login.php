@@ -96,10 +96,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <head>
     <title>Login</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
 </head>
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 <div class="default-margin">
     <div class="wrapper" style="margin: auto;">
         <h2 style="text-align: center;">Login</h2>
@@ -124,7 +124,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 </body>
 <footer>
     <div style="text-align: center;">

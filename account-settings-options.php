@@ -6,11 +6,11 @@
 <html lang="en">
 <head>
     <title>Bucket</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
     <link rel="stylesheet" href="/assets/styles/settings.css">
 </head>
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 <div class="default-margin">
     <h1 style="text-align: center;">Account Settings</h1>
     <div class="feed-container">
@@ -39,7 +39,7 @@
 </div>
 
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 <script src="/assets/scripts/upload-file.js"></script>
 </body>
 </html>

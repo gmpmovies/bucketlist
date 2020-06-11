@@ -1,5 +1,5 @@
 <?php
-require_once "/var/www/html/bucketlist/models/files.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/files.php";
 session_start();
 $following_id = $_SESSION['id'];
 $imageId = $_POST['imageid'];

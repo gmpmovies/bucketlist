@@ -5,11 +5,11 @@ session_start();
 $account_id = $_GET["userid"];
 $user_id = $_SESSION["id"];
 
-require_once "/var/www/html/bucketlist/config.php";
-require_once "/var/www/html/bucketlist/pageload.php";
-require_once "/var/www/html/bucketlist/models/users.php";
-require_once "/var/www/html/bucketlist/models/bucket_users.php";
-require_once "/var/www/html/bucketlist/models/followers.php";
+require_once "/home1/gobinitc/public_html/bucketlist/config.php";
+require_once "/home1/gobinitc/public_html/bucketlist/pageload.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/bucket_users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/followers.php";
 
 error_reporting(E_ALL);
 
@@ -45,13 +45,13 @@ error_log("I AM WRITING SOMETHING NEW HERE");
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <title><?php echo $user->get_firstname() . " " . $user->get_lastname(0) ?> Account</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
     <link rel="stylesheet" href="assets/styles/account.css"/>
 </head>
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
-<?php require_once "/var/www/html/bucketlist/partial/account/popup-followers-following.php"; ?>
-<?php require_once "/var/www/html/bucketlist/partial/account/popup-following.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/partial/account/popup-followers-following.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/partial/account/popup-following.php"; ?>
 <div class="default-margin">
     <div class="row">
         <div class="col-md-4">
@@ -89,7 +89,7 @@ error_log("I AM WRITING SOMETHING NEW HERE");
 
             </div>
 
-            <?php if(isMobile() == False){ require_once "/var/www/html/bucketlist/partial/account/following-followers.php"; } ?>
+            <?php if(isMobile() == False){ require_once "/home1/gobinitc/public_html/bucketlist/partial/account/following-followers.php"; } ?>
 
             <?php
             if(count($common_buckets) <=1){
@@ -146,7 +146,7 @@ error_log("I AM WRITING SOMETHING NEW HERE");
 
 </div>
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 <script src="/assets/scripts/populate-followers-modal.js"></script>
 <script src="/assets/scripts/infinite-feed-scroll.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

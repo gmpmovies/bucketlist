@@ -9,7 +9,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 // Include config file
-require_once "/var/www/html/bucketlist/config.php";
+require_once "/home1/gobinitc/public_html/bucketlist/config.php";
 
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -74,10 +74,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <title>Reset Password</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
 </head>
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 <div class="default-margin">
     <div class="wrapper" style="margin:auto;">
         <h2 style="text-align: center;">Reset Password</h2>
@@ -102,6 +102,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </div>
 
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 </body>
 </html>

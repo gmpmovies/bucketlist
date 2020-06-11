@@ -3,14 +3,14 @@ session_start();
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 
-require_once "/var/www/html/bucketlist/upload-image.php";
-require_once "/var/www/html/bucketlist/models/listitem.php";
-require_once "/var/www/html/bucketlist/models/post.php";
-require_once "/var/www/html/bucketlist/models/users.php";
-require_once "/var/www/html/bucketlist/models/content.php";
-require_once "/var/www/html/bucketlist/models/bucket_users.php";
-require_once "/var/www/html/bucketlist/models/post_content.php";
-require_once "/var/www/html/bucketlist/models/notifications.php";
+require_once "/home1/gobinitc/public_html/bucketlist/upload-image.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/listitem.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/post.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/content.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/bucket_users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/post_content.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/notifications.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     //Get variables from AJAX request -- Some of these need to be validated as they could have been modified by the user.

@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once "/var/www/html/bucketlist/pageload.php";
-require_once "/var/www/html/bucketlist/upload-image.php";
-require_once "/var/www/html/bucketlist/models/users.php";
+require_once "/home1/gobinitc/public_html/bucketlist/pageload.php";
+require_once "/home1/gobinitc/public_html/bucketlist/upload-image.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/users.php";
 $upload_errors = [];
 
 if (isset($_POST['submit'])) {
@@ -27,11 +27,11 @@ foreach($all_images as $key=>$image){
 <html lang="en">
 <head>
     <title>Bucket</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
     <link rel="stylesheet" href="/assets/styles/upload-file.css">
 </head>
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 <div class="default-margin">
     <div class="row">
         <div class="col-md-5">
@@ -90,7 +90,7 @@ foreach($all_images as $key=>$image){
 </div>
 
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 <script src="/assets/scripts/upload-file.js"></script>
 </body>
 </html>

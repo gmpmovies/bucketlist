@@ -4,15 +4,15 @@
 
     session_start();
 
-    require_once "/var/www/html/bucketlist/config.php";
-    require_once "/var/www/html/bucketlist/pageload.php";
-    require_once "/var/www/html/bucketlist/bucket/verify_bucket.php";
-    require_once "/var/www/html/bucketlist/models/listitem.php";
-    require_once "/var/www/html/bucketlist/models/followers.php";
-    require_once "/var/www/html/bucketlist/models/bucket_users.php";
-    require_once "/var/www/html/bucketlist/models/bucket.php";
-    require_once "/var/www/html/bucketlist/bucket/add_listitem.php";
-    require_once "/var/www/html/bucketlist/models/post.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/config.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/pageload.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/bucket/verify_bucket.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/models/listitem.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/models/followers.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/models/bucket_users.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/models/bucket.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/bucket/add_listitem.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/models/post.php";
 
     $update_date = Bucket_Users::updateLastViewed($_SESSION['id'], $bucket_id);
     $items = Listitem::getAllInstances($bucket_id); //Get all items for the bucket
@@ -25,16 +25,16 @@
 <html lang="en">
 <head>
     <title>Bucket</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
     <link rel="stylesheet" href="/assets/styles/upload-file.css">
     <link rel="stylesheet" href="/assets/styles/bucket.css">
 </head>
 <body>
 
-<?php require_once "/var/www/html/bucketlist/partial/bucket/model-bucket-item.php"; ?>
-<?php require_once "/var/www/html/bucketlist/partial/bucket/model-post-item.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/partial/bucket/model-bucket-item.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/partial/bucket/model-post-item.php"; ?>
 
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 <div class="default-margin">
     <div class="feed-container" style="padding: 5px;">
         <?php
@@ -165,7 +165,7 @@
 
 </div>
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 <script src="/assets/scripts/modal.js"></script>
 </body>
 </body>

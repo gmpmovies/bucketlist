@@ -1,5 +1,5 @@
 <?php
-require_once "/var/www/html/bucketlist/models/post.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/post.php";
 $offset = $_GET['offset'];
 $loc = $_GET['loc'];
 $batch_id = $offset;

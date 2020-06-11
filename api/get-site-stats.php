@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-require_once "/var/www/html/bucketlist/api/api-config.php";
+require_once "/home1/gobinitc/public_html/bucketlist/api/api-config.php";
 $api_key = $_GET["key"];
 $is_valid = True;
 if($api_key != "api-key-for-tylers-data-retrieve-device09347298434036798345"){

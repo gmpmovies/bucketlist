@@ -2,8 +2,8 @@
 // Include config file
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-require_once "/var/www/html/bucketlist/config.php";
-require_once "/var/www/html/bucketlist/lib/password.php";
+require_once "/home1/gobinitc/public_html/bucketlist/config.php";
+require_once "/home1/gobinitc/public_html/bucketlist/lib/password.php";
 
 $timezone = date_default_timezone_get();
 date_default_timezone_set($timezone);
@@ -126,11 +126,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <head>
     <title>Sign Up</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
 </head>
 
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
     <div class="default-margin">
         <div class="wrapper" style="margin:auto;">
             <h2 style="text-align: center;">Sign Up</h2>
@@ -177,7 +177,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
 
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 </body>
 <footer>
     <div style="text-align: center;">

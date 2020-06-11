@@ -5,10 +5,10 @@ function isMobile () {
 
 
 if(isMobile()){
-    require_once "/var/www/html/bucketlist/partial/navbar/navbar-mobile.php";
-    require_once "/var/www/html/bucketlist/partial/navbar/navbar-mobile-top.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/partial/navbar/navbar-mobile.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/partial/navbar/navbar-mobile-top.php";
 } else {
-    require_once "/var/www/html/bucketlist/partial/navbar/navbar-desktop.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/partial/navbar/navbar-desktop.php";
 }
 
 ?>

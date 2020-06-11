@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once "/var/www/html/bucketlist/config.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/config.php";
     $bucket_id = $_GET["bucketid"];
     $sql = "SELECT userid 
             FROM bucket_users

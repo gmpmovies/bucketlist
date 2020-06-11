@@ -1,7 +1,7 @@
 <?php
     session_start();
-    require_once "/var/www/html/bucketlist/models/notifications.php";
-    require_once "/var/www/html/bucketlist/pageload.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/models/notifications.php";
+    require_once "/home1/gobinitc/public_html/bucketlist/pageload.php";
 
     $notifications = Notifications::get_notifications($_SESSION['id']);
 ?>
@@ -10,11 +10,11 @@
 <html lang="en">
     <head>
         <title>Bucket</title>
-        <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+        <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
         <link rel="stylesheet" href="/assets/styles/notifications.css">
     </head>
     <body>
-        <?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+        <?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
         <div class="default-margin">
             <div class="notification-container">
             <?php
@@ -60,7 +60,7 @@
             ?>
             </div>
         </div>
-        <?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+        <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
         <script src="/assets/scripts/notification.js"></script>
     </body>
 </html>

@@ -3,8 +3,8 @@ session_start();
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 
-require_once "/var/www/html/bucketlist/config.php";
-require_once "/var/www/html/bucketlist/pageload.php";
+require_once "/home1/gobinitc/public_html/bucketlist/config.php";
+require_once "/home1/gobinitc/public_html/bucketlist/pageload.php";
 
 $bucket_name = $bucket_desc = "";
 $bucket_err = "";
@@ -79,11 +79,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Create Bucketlist</title>
-    <?php require_once "/var/www/html/bucketlist/html_style_head.php"?>
+    <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
     <link rel="stylesheet" href="/assets/styles/bucket.css"/>
 </head>
 <body>
-<?php require_once "/var/www/html/bucketlist/navbar.php"; ?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 <div class="default-margin">
     <div class="feed-container">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </div>
 
-<?php require_once "/var/www/html/bucketlist/html_body_scripts.php"?>
+<?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
 </body>
 </html>
 
