@@ -6,13 +6,13 @@ session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: bucketlist/feed.php");
+    header("location: /bucketlist/feed.php");
     exit;
 }
 
 // Include config file
 require_once "/home1/gobinitc/public_html/bucketlist/config.php";
-require_once "/home1/gobinitc/public_html/lib/password.php";
+require_once "/home1/gobinitc/public_html/bucketlist/lib/password.php";
 
 // Define variables and initialize with empty values
 $username = $password = "";

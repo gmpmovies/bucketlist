@@ -1,5 +1,5 @@
 <?php
-$current_server_ip = '162.241.253.195';
+$current_server_ip = '162.241.253.195:3306';
 
 if(substr(php_uname(),0,12) == "Linux bucketNOPE") {
     define('DB_SERVER', 'localhost');
