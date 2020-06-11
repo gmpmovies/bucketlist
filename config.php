@@ -1,5 +1,5 @@
 <?php
-$current_server_ip = '162.241.253.195:3306';
+$current_server_ip = '162.241.253.195';
 
 if(substr(php_uname(),0,12) == "Linux bucketNOPE") {
     define('DB_SERVER', 'localhost');
@@ -9,7 +9,7 @@ else {
 }
 define('DB_USERNAME', 'gobinitc_admin');
 define('DB_PASSWORD', 'Mydbisnumber1!');
-define('DB_NAME', 'tremac');
+define('DB_NAME', 'gobinitc_tremac');
 
 /* Attempt to connect to MySQL database */
 $mysqli = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
