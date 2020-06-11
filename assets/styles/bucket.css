@@ -1,0 +1,283 @@
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.current_completed_toggle-container{
+    width: auto;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.current_completed_toggle{
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.form-label-custom {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.photo-option-container{
+    position: relative;
+    height: 32px;
+    background-color: #eee;
+    border-bottom: #999 solid 1px;
+    border-left: #999 solid 1px;
+    border-right: #999 solid 1px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.post-camera-icon{
+    height: 25px;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.photo-selection:hover{
+    cursor: pointer;
+}
+
+.photo-selection:hover .post-camera-icon{
+    height: 27px;
+}
+.warning {
+    color: red;
+}
+.modal-max-body-height{
+    overflow: scroll;
+}
+
+@media screen and (max-height: 1500px) {
+    .modal-max-body-height{
+        max-height: 900px;
+    }
+}
+
+@media screen and (max-height: 1200px) {
+    .modal-max-body-height{
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .modal-max-body-height{
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .modal-max-body-height{
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .modal-max-body-height{
+        max-height: 550px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .modal-max-body-height{
+        max-height: 450px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .modal-max-body-height{
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .modal-max-body-height{
+        max-height: 350px;
+    }
+}
+
+.image-preview-container{
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+
+.image-preview{
+    width: inherit;
+}
+
+.yt-video-demo{
+    width: 100%;
+    height: auto;
+    margin: 5px 0px 5px 0px;
+}
+
+.loading-overlay-container{
+    z-index: 10000000000000;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 10000000000000000000000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+#overlay-icon-container{
+    position: relative;
+    margin: auto;
+    height: 100px;
+    width: 120px;
+    z-index: 10000000000000000000001;
+    background-color: #fff;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.overlay-complete-container{
+    z-index: 10000000000000000000001;
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#overlay-loading-icon-percent{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.onoffswitch {
+    margin: auto;
+    position: relative; width: 189px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 35px; padding: 0; line-height: 35px;
+    font-size: 15px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "CURRENT ITEMS";
+    padding-left: 11px;
+    background-color: #3E7BD6; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "CHECKED OFF";
+    padding-right: 11px;
+    background-color: #248008; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 21px; margin: 7px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 150px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}

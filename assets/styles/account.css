@@ -1,0 +1,77 @@
+.modal-account-popup-text{
+    color: black;
+    text-decoration: none;
+    margin-bottom: 0px;
+
+}
+
+.modal-account-popup-text:hover{
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.modal-max-body-height{
+    overflow: scroll;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.follow-count:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-height: 1500px) {
+    .modal-max-body-height{
+        max-height: 900px;
+    }
+}
+
+@media screen and (max-height: 1200px) {
+    .modal-max-body-height{
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .modal-max-body-height{
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .modal-max-body-height{
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .modal-max-body-height{
+        max-height: 550px;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .modal-max-body-height{
+        max-height: 450px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .modal-max-body-height{
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .modal-max-body-height{
+        max-height: 350px;
+    }
+}
+

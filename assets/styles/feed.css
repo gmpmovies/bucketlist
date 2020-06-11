@@ -1,0 +1,171 @@
+.feed-item{
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.infinite-feed-container{
+    max-width: 500px;
+}
+
+.post-text{
+    margin: 0px 20px 10px 20px;
+    max-height: 230px;
+    overflow: scroll;
+}
+
+.all-posters{
+    padding-top: 10px;
+}
+
+.feed-image-container{
+    overflow: hidden;
+    max-height: 800px;
+    margin: auto;
+    position: relative;
+    min-height: 200px;
+}
+
+.feed-image{
+    width: 100%;
+}
+
+.feed-item-poster-name{
+    margin-left: 20px;
+}
+
+.feed-post-buttons{
+    text-align: center;
+    height: 40px;
+}
+
+.feed-post-button-text{
+    margin-top: 10px;
+}
+
+.no-margin{
+    margin: 0px;
+}
+
+.feed-expand-icon{
+    width: 30px;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.feed-expand-icon-container{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+}
+
+.feed-expand-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 35px;
+    height: 35px;
+}
+
+.feed-expand-container:hover{
+    cursor: pointer;
+}
+
+.feed-video-container{
+    overflow: hidden;
+    max-height: 600px;
+    margin: auto;
+    position: relative;
+    min-height: 200px;
+}
+
+.feed-video-thumbnail-container{
+    max-height: 600px;
+}
+
+.feed-video-play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 30px;
+    z-index: 1;
+    transition: all .5s ease;
+}
+
+.feed-video-dark{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0,0,0,0.5);
+    transition: all .5s ease;
+}
+
+.feed-video{
+    width: 100%;
+}
+
+.feed-video-thumbnail-container:hover{
+    cursor: pointer;
+}
+
+.feed-video-thumbnail-container:hover .feed-video-dark{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.feed-video-thumbnail-container:hover .feed-video-play-button{
+    width: 40px;
+}
+
+.all-posts:focus{
+    outline: none;
+}
+
+.slick-track:focus{
+    outline: none;
+}
+
+.post:focus{
+    outline: none;
+}
+.feed-post-container{
+    max-width: 500px;
+}
+
+@media only screen and (max-width: 480px) {
+    .feed-post-container{
+        border: none;
+    }
+    .feed-video-container{
+        max-height: 300px;
+    }
+    .feed-video-thumbnail-container{
+        min-height: 200px;
+        max-height: 300px;
+    }
+}
+
+/*POTENTIAL DARK MODE?*/
+/*@media only screen and (max-width: 480px) {*/
+/*    hr{*/
+/*        color: #fff;*/
+/*    }*/
+/*    .feed-post-container{*/
+/*        background-color: #000;*/
+/*        color: #fff !important;*/
+/*        border: none;*/
+/*    }*/
+/*    a{*/
+/*        font-weight: 700;*/
+/*        color: #fff;*/
+/*    }*/
+/*    body{*/
+/*        background-color: #000;*/
+/*    }*/
+/*}*/

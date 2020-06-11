@@ -1,0 +1,35 @@
+.notification-container-unread{
+    background-color: #edf2f9;
+    padding: 10px;
+    min-height: 70px;
+}
+.notification-container-read{
+    background-color: #fff;
+    padding: 10px;
+    min-height: 70px;
+}
+
+.notification-text{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #000;
+}
+
+.notification-text:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+.notification-container{
+
+}
+
+.single-notification:hover{
+    cursor: pointer;
+}
+
+body{
+    background-color: #fff;
+}

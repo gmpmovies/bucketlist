@@ -1,0 +1,51 @@
+.settings-item{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    transition: all ease .25s;
+    max-width: 400px;
+    margin: auto;
+}
+
+.settings-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+.settings-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:20px;
+    transition: all ease .25s;
+}
+
+.settings-item:hover .settings-icon{
+    right: 5px;
+}
+
+.settings-item:hover{
+    cursor: pointer;
+}
+
+.settings-item:hover .settings-text{
+    text-decoration: underline;
+}
+
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
