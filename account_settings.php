@@ -37,7 +37,7 @@ foreach($all_images as $key=>$image){
         <div class="col-md-5">
             <div style="text-align: center;">
                 <div class="profile_pic_container_account">
-                    <img class="profile_pic js_current_user_pic" src="/uploads/<?php echo $user->get_File()->get_filename()?>"/>
+                    <img class="profile_pic js_current_user_pic" src="/bucketlist/uploads/<?php echo $user->get_File()->get_filename()?>"/>
                 </div>
                 <p style="margin-bottom: 10px; margin-top: -6px;" class="name"><?php echo $user->get_firstname() . ' ' . $user->get_lastname()?></p>
             </div>
@@ -48,7 +48,7 @@ foreach($all_images as $key=>$image){
                     </div>
                     <p class="warning d-none"></p>
                     <div style="text-align: left" class="text-danger">
-                        <span class="help-block"><?php if(count($upload_errors)>=1){foreach($upload_errors as $error){echo($error . ' ');}} ?></span>
+                        <span class="help-block"><?php if(is_array($upload_errors)){foreach($upload_errors as $error){echo($error . ' ');}} ?></span>
                     </div>
                     <div class="image-preview-container-account d-none">
                         <div class="profile_pic_container_account">
@@ -72,7 +72,7 @@ foreach($all_images as $key=>$image){
                                 echo'
                                 <div class="col-md-4 col-sm-6 col-6 js-update-profile-pic" style="text-align: center; margin-bottom: 5px;" data-imageid="' . $image->get_id() . '">
                                     <div style="cursor: pointer;" class="profile_pic_container_account ' . (($image->get_is_current_profile_pic()==True)?"is_active_profile":"") . '">
-                                        <img class="profile_pic" src="/uploads/' . $image->get_filename() . '"/>
+                                        <img class="profile_pic" src="/bucketlist/uploads/' . $image->get_filename() . '"/>
                                     </div>
                                 </div>
                             ';
