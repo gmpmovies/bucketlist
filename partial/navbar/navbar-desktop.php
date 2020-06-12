@@ -8,12 +8,12 @@
             <?php
             if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo "
-                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/home.php\">Home</a></li>
+                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/bucketlist/home.php\">Home</a></li>
                 ";
             } else {
                 echo "
-                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/feed.php\">Feed</a></li>
-                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/account.php?userid=" . $_SESSION['id'] . " \">My Profile</a></li>
+                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/bucketlist/feed.php\">Feed</a></li>
+                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/bucketlist/account.php?userid=" . $_SESSION['id'] . " \">My Profile</a></li>
                     
                 ";
             }
@@ -28,24 +28,24 @@
             <?php
             if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 echo "
-                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/register.php\">Sign Up</a></li>
-                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/login.php\">Login</a></li>
+                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/bucketlist/register.php\">Sign Up</a></li>
+                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/bucketlist/login.php\">Login</a></li>
                     
                 ";
             } else {
                 echo "
                     
                     <li class=\"nav-item dropdown\">
-                        <a class=\"nav-link dropdown-toggle\" href=\"/account.php\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                        <a class=\"nav-link dropdown-toggle\" href=\"/bucketlist/account.php\" id=\"navbarDropdownMenuLink\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                           Settings
                         </a>
                         <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-                          <a class=\"dropdown-item\" href=\"/reset-password.php\">Reset Password</a>
-                          <a class=\"dropdown-item\" href=\"/account_settings.php\">Upload Profile Picture</a>
+                          <a class=\"dropdown-item\" href=\"/bucketlist/reset-password.php\">Reset Password</a>
+                          <a class=\"dropdown-item\" href=\"/bucketlist/account_settings.php\">Upload Profile Picture</a>
                         </div>
                     </li>
                     
-                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/logout.php\">Logout</a></li>
+                    <li class=\"nav-item\"><a class=\"nav-link\" href=\"/bucketlist/logout.php\">Logout</a></li>
                     
                     <button type=\"button\" class=\"btn btn-primary\">
                       Notifications <span class=\"badge badge-pill badge-light\">9</span>
@@ -57,4 +57,3 @@
         </ul>
     </div>
 </nav>
-<div style="max-width: 800px; margin: auto;" class="js-error-message"></div>
