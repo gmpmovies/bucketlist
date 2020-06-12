@@ -41,7 +41,7 @@ class UploadImage{
         $this->tmp = explode('.', $this->fileName);
         $this->fileExtension = strtolower(end($this->tmp));
         $this->converted_file_name = $this->tmp[0];
-        $this->currentDir = '/var/www/html/bucketlist';
+        $this->currentDir = '/home1/gobinitc/public_html/bucketlist';
         if (!in_array($this->fileExtension,$this->fileExtensions)){
             if($this->fileExtension == ""){
                 $this->errors[] = "Please upload a JPEG or PNG file.";
