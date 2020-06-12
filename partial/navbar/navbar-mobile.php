@@ -50,7 +50,7 @@ if($mobile_navbar_user->get_number_notifications() >= 1){
             echo "
                     <div class=\"col-2 item_container mobile-navbar-js-loading\">
                         <a href=\"/bucketlist/feed.php\" class='mobile-navbar-js-loading navbar-mobile-link'>
-                            " . (($current_page == '/feed.php')?'<img class="navbar-icon" src="/bucketlist/assets/icons/home_active.svg"/>':'<img class="navbar-icon" src="/bucketlist/assets/icons/home.svg"/>') . "
+                            " . (($current_page == '/bucketlist/feed.php')?'<img class="navbar-icon" src="/bucketlist/assets/icons/home_active.svg"/>':'<img class="navbar-icon" src="/bucketlist/assets/icons/home.svg"/>') . "
                         </a>
                     </div>
             
