@@ -24,7 +24,7 @@ function retrieveContent(){
 
     $.ajax({
         type: "GET",
-        url: "/actions/get-posts.php",
+        url: "/bucketlist/actions/get-posts.php",
         contentType: "application/json; charset=utf-8",
         data: {offset: offset, loc: loc, userid: userid},
 
