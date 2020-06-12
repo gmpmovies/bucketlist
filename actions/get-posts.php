@@ -28,7 +28,7 @@ if(count($feed) >= 1){
                     <a class='profile_pic_link' href='/bucketlist/account.php?userid=" . $user->get_id() . "'>
                         <div>
                             <span class='profile_pic_container_search' style='vertical-align: middle'>
-                                <img src='/uploads/" . $user->get_File()->get_filename() . "' class='profile_pic'>
+                                <img src='/bucketlist/uploads/" . $user->get_File()->get_filename() . "' class='profile_pic'>
                             </span>
                         
                             <span>" . $user->get_firstname() . " " . $user->get_lastname() . " </span>
@@ -55,7 +55,7 @@ if(count($feed) >= 1){
                             <p class="feed-item-poster-name">
                                 <a class="profile_pic_link" href="/bucketlist/account.php?userid=' . $unique_post->get_User()->get_id() . '">
                                     <span class="profile_pic_container_search" style="vertical-align: middle">
-                                        <img src="/uploads/' . $unique_post->get_User()->get_File()->get_filename() . '" class="profile_pic">
+                                        <img src="/bucketlist/uploads/' . $unique_post->get_User()->get_File()->get_filename() . '" class="profile_pic">
                                     </span>
                                     <span>' . $unique_post->get_User()->get_firstname() . ' ' . $unique_post->get_User()->get_lastname() . ' </span>
                                 </a>
@@ -66,7 +66,7 @@ if(count($feed) >= 1){
                             <div class="feed-video-thumbnail-container">
                                 <img class="feed-video-play-button" src="/bucketlist/assets/icons/play-button.svg"/>
                                 <div class="feed-video-dark"></div>
-                                <img class="feed-image" src="/uploads/' . $unique_post->get_Content()->get_File()->get_filename() . '"/>
+                                <img class="feed-image" src="/bucketlist/uploads/' . $unique_post->get_Content()->get_File()->get_filename() . '"/>
                             </div>
                             <div class="feed-video-embed d-none" data-videoid="' . $unique_post->get_Content()->get_videoURL() . '" data-postid="unique-post-' . $unique_post_id . '">
                                
@@ -83,7 +83,7 @@ if(count($feed) >= 1){
                                 <p class="feed-item-poster-name">
                                     <a class="profile_pic_link" href="/bucketlist/account.php?userid=' . $unique_post->get_User()->get_id() . '">
                                         <span class="profile_pic_container_search" style="vertical-align: middle">
-                                            <img src="/uploads/' . $unique_post->get_User()->get_File()->get_filename() . '" class="profile_pic">
+                                            <img src="/bucketlist/uploads/' . $unique_post->get_User()->get_File()->get_filename() . '" class="profile_pic">
                                         </span>
                                         <span>' . $unique_post->get_User()->get_firstname() . ' ' . $unique_post->get_User()->get_lastname() . ' </span>
                                     </a>
@@ -95,7 +95,7 @@ if(count($feed) >= 1){
                                     <div class="feed-expand-icon-container"></div>
                                     <img class="feed-expand-icon" src="/bucketlist/assets/icons/expand.svg">
                                 </div>
-                                <img class="feed-image" src="/uploads/' . $unique_post->get_Content()->get_File()->get_filename() . '"/>
+                                <img class="feed-image" src="/bucketlist/uploads/' . $unique_post->get_Content()->get_File()->get_filename() . '"/>
                             </div>
                         </div>
                     </div>

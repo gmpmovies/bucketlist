@@ -165,7 +165,7 @@ class Users {
     }
     function get_lastname($show_verified = True) {
         if($this->is_verified==True && $show_verified==True){
-            $lastnameIcon = $this->lastname . " <img src=\"/assets/icons/verified.svg\" class=\"verified-icon\" />";
+            $lastnameIcon = $this->lastname . " <img src=\"/bucketlist/assets/icons/verified.svg\" class=\"verified-icon\" />";
             return $lastnameIcon;
         }
         return $this->lastname;
