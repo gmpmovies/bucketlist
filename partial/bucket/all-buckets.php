@@ -16,9 +16,9 @@ $buckets = Bucket_Users::GetAllBucketsForUser($_SESSION['id']);
     foreach($buckets as $bucket) {
         $isPrivate = $bucket->get_Bucket()->get_isPrivate();
         if($isPrivate == True){
-            $bucketPrivacyIcon = '/assets/icons/lock.svg';
+            $bucketPrivacyIcon = '/bucketlist/assets/icons/lock.svg';
         } else {
-            $bucketPrivacyIcon = '/assets/icons/unlock.svg';
+            $bucketPrivacyIcon = '/bucketlist/assets/icons/unlock.svg';
         }
         echo "
             <div class=\"bucket-container\">
