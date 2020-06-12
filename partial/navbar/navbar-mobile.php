@@ -17,18 +17,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 
 $current_page = $_SERVER['REQUEST_URI'];
-if (substr($current_page, 0, 7) == "/bucket"){
+if (substr($current_page, 0, 18) == "/bucketlist/bucket"){
     $current_page = "/bucket";
 }
-if(substr($current_page, 0, 12) == "/account.php"){
+if(substr($current_page, 0, 23) == "/bucketlist/account.php"){
     if($navbar_id == $account_id){
         $current_page = "self";
     }
 }
-if (substr($current_page, 0, 13) == "/views/search"){
+if (substr($current_page, 0, 24) == "/bucketlist/views/search"){
     $current_page = "/search";
 }
-if (substr($current_page, 0, 20) == "/views/notifications"){
+if (substr($current_page, 0, 31) == "/bucketlist/views/notifications"){
     $current_page = "/notifications";
 }
 
@@ -49,28 +49,28 @@ if($mobile_navbar_user->get_number_notifications() >= 1){
         } else {
             echo "
                     <div class=\"col-2 item_container mobile-navbar-js-loading\">
-                        <a href=\"/feed.php\" class='mobile-navbar-js-loading navbar-mobile-link'>
+                        <a href=\"/bucketlist/feed.php\" class='mobile-navbar-js-loading navbar-mobile-link'>
                             " . (($current_page == '/feed.php')?'<img class="navbar-icon" src="/bucketlist/assets/icons/home_active.svg"/>':'<img class="navbar-icon" src="/bucketlist/assets/icons/home.svg"/>') . "
                         </a>
                     </div>
             
             
                     <div class=\"col-2 item_container mobile-navbar-js-loading\">
-                        <a href=\"/views/search/search-users.php\" class='navbar-mobile-link mobile-navbar-js-loading'>
+                        <a href=\"/bucketlist/views/search/search-users.php\" class='navbar-mobile-link mobile-navbar-js-loading'>
                             " . (($current_page == "/search")?'<img class="navbar-icon" src="/bucketlist/assets/icons/search_active.svg"/>':'<img class="navbar-icon" src="/bucketlist/assets/icons/search.svg"/>') . "
                         </a>
                     </div>
             
             
                     <div class=\"col-4 item_container mobile-navbar-js-loading\">
-                        <a href=\"/bucket/mobile-all-buckets.php\" class='navbar-mobile-link mobile-navbar-js-loading'>
+                        <a href=\"/bucketlist/bucket/mobile-all-buckets.php\" class='navbar-mobile-link mobile-navbar-js-loading'>
                             " . (($current_page == '/bucket')?'<img class="navbar-icon" src="/bucketlist/assets/icons/pail_active.svg"/>':'<img class="navbar-icon" src="/bucketlist/assets/icons/pail.svg"/>') . "
                         </a>
                     </div>
             
             
                     <div class=\"col-2 item_container mobile-navbar-js-loading\">
-                        <a href=\"/views/notifications/notifications.php\" class='navbar-mobile-link mobile-navbar-js-loading'>
+                        <a href=\"/bucketlist/views/notifications/notifications.php\" class='navbar-mobile-link mobile-navbar-js-loading'>
                             " . (($active_notification)?'<p class=\'notification-indicator\'>' . $num_notifications . '</p>':'') . "
                             " . (($current_page == "/notifications")?'<img class="navbar-icon" src="/bucketlist/assets/icons/alarm_active.svg"/>':'<img class="navbar-icon" src="/bucketlist/assets/icons/alarm.svg"/>') . "
                         </a>
@@ -78,7 +78,7 @@ if($mobile_navbar_user->get_number_notifications() >= 1){
             
             
                     <div class=\"col-2 item_container mobile-navbar-js-loading\" style=\"border-right: none;\">
-                        <a href=\"/account.php?userid=" . $navbar_id . "?>\" class='navbar-mobile-link mobile-navbar-js-loading'>
+                        <a href=\"/bucketlist/account.php?userid=" . $navbar_id . "?>\" class='navbar-mobile-link mobile-navbar-js-loading'>
                             <div style='padding-top: 6px;'>
                                 <div class=\"navbar-photo-container " . (($current_page == "self")?'profile_active':'') . "\">
                                     <img class=\"navbar-profile-photo\" src=\"/uploads/" . $mobile_navbar_user->get_File()->get_filename() . "\"/>
