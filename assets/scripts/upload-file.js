@@ -12,7 +12,7 @@ $('.js-update-profile-pic').on('click', function(){
 
     $.ajax({
         type: "POST",
-        url: "/actions/update-profile-pic.php",
+        url: "/bucketlist/actions/update-profile-pic.php",
         data: ({imageid: imageid}),
 
         beforeSend(jqXHR, settings) {
