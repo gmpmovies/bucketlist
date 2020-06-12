@@ -25,7 +25,7 @@ if(count($feed) >= 1){
             if($post_content->get_has_posted() == True){
                 array_push($post_users, $user);
                 $popoverContent = "
-                    <a class='profile_pic_link' href='/account.php?userid=" . $user->get_id() . "'>
+                    <a class='profile_pic_link' href='/bucketlist/account.php?userid=" . $user->get_id() . "'>
                         <div>
                             <span class='profile_pic_container_search' style='vertical-align: middle'>
                                 <img src='/uploads/" . $user->get_File()->get_filename() . "' class='profile_pic'>
@@ -53,7 +53,7 @@ if(count($feed) >= 1){
                     <div class="post unique-post-' . $unique_post_id . '">
                         <div class="feed-text-height">
                             <p class="feed-item-poster-name">
-                                <a class="profile_pic_link" href="/account.php?userid=' . $unique_post->get_User()->get_id() . '">
+                                <a class="profile_pic_link" href="/bucketlist/account.php?userid=' . $unique_post->get_User()->get_id() . '">
                                     <span class="profile_pic_container_search" style="vertical-align: middle">
                                         <img src="/uploads/' . $unique_post->get_User()->get_File()->get_filename() . '" class="profile_pic">
                                     </span>
@@ -81,7 +81,7 @@ if(count($feed) >= 1){
                         <div style="height: auto;">
                             <div class="feed-text-height">
                                 <p class="feed-item-poster-name">
-                                    <a class="profile_pic_link" href="/account.php?userid=' . $unique_post->get_User()->get_id() . '">
+                                    <a class="profile_pic_link" href="/bucketlist/account.php?userid=' . $unique_post->get_User()->get_id() . '">
                                         <span class="profile_pic_container_search" style="vertical-align: middle">
                                             <img src="/uploads/' . $unique_post->get_User()->get_File()->get_filename() . '" class="profile_pic">
                                         </span>
@@ -109,13 +109,13 @@ if(count($feed) >= 1){
         $count_users = $count_users - 1;
         if($count_users >= 1){
             $users_modal = '
-            <a href="/account.php?userid=' . $post_users[0]->get_id() . '">' . $post_users[0]->get_firstname() . ' ' . $post_users[0]->get_lastname() . ' </a>
+            <a href="/bucketlist/account.php?userid=' . $post_users[0]->get_id() . '">' . $post_users[0]->get_firstname() . ' ' . $post_users[0]->get_lastname() . ' </a>
             and
             <a role="button" tabindex="0" data-trigger="focus" class="" data-toggle="popover" data-html="true" data-placement="bottom" data-content="' . htmlspecialchars($popover) . '"> ' . $count_users . ' ' . ($count_users >= 2 ? 'others':'other') . ' </a>
             checked off ' . $item->get_Item()->get_item_name();
         } else {
             $users_modal = '
-            <a href="/account.php?userid=' . $post_users[0]->get_id() . '">' . $post_users[0]->get_firstname() . ' ' . $post_users[0]->get_lastname() . ' </a>
+            <a href="/bucketlist/account.php?userid=' . $post_users[0]->get_id() . '">' . $post_users[0]->get_firstname() . ' ' . $post_users[0]->get_lastname() . ' </a>
             checked off ' . $item->get_Item()->get_item_name();
         }
 
