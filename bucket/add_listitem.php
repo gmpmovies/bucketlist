@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         $increase_notification_cnt = Users::increaseNotifications($notify_user->get_id());
                     }
                 }
-                header("location: /bucket/bucket.php?bucketid=" . $bucket_id);
+                header("location: /bucketlist/bucket/bucket.php?bucketid=" . $bucket_id);
             }
             else {
                 echo("There was an issue executing the SQL statment: " . $mysqli->error);

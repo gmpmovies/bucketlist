@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 } else {
                     echo "There was an issue with the second SQL prepare statement";
                 }
-                header("location: /bucket/bucket.php?bucketid=" . $new_id);
+                header("location: /bucketlist/bucket/bucket.php?bucketid=" . $new_id);
             } else {
                 echo "Something went wrong while executing the query";
             }

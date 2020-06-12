@@ -16,7 +16,7 @@
 
             }
             else {
-                header("location: /error.php");
+                header("location: /bucketlist/error.php");
             }
         }
 
