@@ -63,6 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             session_start();
 
                             $setSession = new setSessionVars($id, $username, $firstname, $lastname, $email);
+                            $setSession->setSessionVariables();
 
                         } else {
                             // Display an error message if password is not valid
