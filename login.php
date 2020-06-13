@@ -111,7 +111,7 @@ class setSessionVars{
         $_SESSION["firstname"] = $this->firstname;
         $_SESSION["lastname"] = $this->lastname;
         $_SESSION["email"] = $this->email;
-        error_log("This is the username: " . $this->username);
+        error_log("This is the username: " . $_SESSION["username"]);
 
         // Set cookies
         $hour=time()+3600*24*36000;
