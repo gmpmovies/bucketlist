@@ -18,6 +18,10 @@ require_once "/home1/gobinitc/public_html/bucketlist/lib/password.php";
 $username = $password = "";
 $username_err = $password_err = "";
 
+if(isset($_COOKIE['username'])){
+    $setSession = new setSessionVars($_COOKIE['id'], $_COOKIE['username'], $_COOKIE['firstname'], $_COOKIE['lastname'], $_COOKIE['email']);
+}
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if username is empty
@@ -58,16 +62,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             // Password is correct, so start a new session
                             session_start();
 
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
-                            $_SESSION["firstname"] = $firstname;
-                            $_SESSION["lastname"] = $lastname;
-                            $_SESSION["email"] = $email;
+                            $setSession = new setSessionVars($id, $username, $firstname, $lastname, $email);
 
-                            // Redirect user to welcome page
-                            header("location: /bucketlist/feed.php");
                         } else {
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
@@ -88,6 +84,44 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Close connection
     $mysqli->close();
+}
+
+class setSessionVars{
+    private $id;
+    private $username;
+    private $firstname;
+    private $lastname;
+    private $email;
+
+    public function __construct($id, $username, $firstname, $lastname, $email){
+        $this->$id = $id;
+        $this->username =$username;
+        $this->firstname = $firstname;
+        $this->lastname = $lastname;
+        $this->email = $email;
+    }
+
+    public function setSessionVariables(){
+        // Store data in session variables
+        $_SESSION["loggedin"] = true;
+        $_SESSION["id"] = $this->id;
+        $_SESSION["username"] = $this->username;
+        $_SESSION["firstname"] = $this->firstname;
+        $_SESSION["lastname"] = $this->lastname;
+        $_SESSION["email"] = $this->email;
+
+        // Set cookies
+        $hour=time()+3600*24*36000;
+        setcookie('userid', $this->id, $hour);
+        setcookie('username', $this->username, $hour);
+        setcookie('firstname', $this->firstname, $hour);
+        setcookie('lastname', $this->lastname, $hour);
+        setcookie('email', $this->email, $hour);
+        setcookie('active', 1, $hour);
+
+        // Redirect user to welcome page
+        header("location: /bucketlist/feed.php");
+    }
 }
 ?>
 
