@@ -32,7 +32,7 @@ $('#followersModal, #followingModal').on('show.bs.modal', function (event) {
                     }
                     resultBlock = "<div class=\"row\">\n" +
                         "                    <div class=\"col-3\">\n" +
-                        "                        <a href=\"/account.php?userid=" + value["id"] + "\">\n" +
+                        "                        <a href=\"/bucketlist/account.php?userid=" + value["id"] + "\">\n" +
                         "                            <div class=\"profile_pic_container_search\">\n" +
                         "                                <img class=\"profile_pic\" src=\"/bucketlist/uploads/" + value["File"]["filename"] + "\"/>\n" +
                         "                            </div>\n" +

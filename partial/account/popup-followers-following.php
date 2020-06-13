@@ -13,7 +13,7 @@
                     <div class="col-3">
                         <a href="">
                             <div class="profile_pic_container_search">
-                                <img class="profile_pic" src="/uploads/default.jpeg"/>
+                                <img class="profile_pic" src="/bucketlist/uploads/default.jpeg"/>
                             </div>
                         </a>
                     </div>

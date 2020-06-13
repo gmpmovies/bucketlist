@@ -14,9 +14,9 @@ $following = Followers::getAllFollowers($account_id, True);
             foreach($followers as $follower){
                 echo "
                         <div class=\"col-md-4\">
-                            <a href='/account.php?userid=" . $follower->get_id() . "'>
+                            <a href='/bucketlist/account.php?userid=" . $follower->get_id() . "'>
                                 <div class=\"profile_pic_container_search\" style=\"display: block;\">
-                                    <img class=\"profile_pic\" src=\"/uploads/" . $follower->get_File()->get_filename() . "\"/>
+                                    <img class=\"profile_pic\" src=\"/bucketlist/uploads/" . $follower->get_File()->get_filename() . "\"/>
                                 </div>
                                 <p class=\"center_name_text\">" . $follower->get_firstname() . " " . $follower->get_lastname() . "</p>
                             </a>
@@ -42,9 +42,9 @@ $following = Followers::getAllFollowers($account_id, True);
             foreach($following as $follows){
                 echo "
                                 <div class=\"col-md-4\">
-                                    <a href='/account.php?userid=" . $follows->get_id() . "'>
+                                    <a href='/bucketlist/account.php?userid=" . $follows->get_id() . "'>
                                         <div class=\"profile_pic_container_search\" style=\"display: block;\">
-                                            <img class=\"profile_pic\" src=\"/uploads/" . $follows->get_File()->get_filename() . "\"/>
+                                            <img class=\"profile_pic\" src=\"/bucketlist/uploads/" . $follows->get_File()->get_filename() . "\"/>
                                         </div>
                                         <p class=\"center_name_text\">" . $follows->get_firstname() . " " . $follows->get_lastname() . "</p>
                                     </a>
