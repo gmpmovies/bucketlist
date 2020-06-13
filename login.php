@@ -60,8 +60,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     if($stmt->fetch()) {
                         if(password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
-                            session_start();
-
                             $setSession = new setSessionVars($id, $username, $firstname, $lastname, $email);
                             $setSession->setSessionVariables();
 
@@ -103,6 +101,7 @@ class setSessionVars{
     }
 
     public function setSessionVariables(){
+        session_start();
         // Store data in session variables
         $_SESSION["loggedin"] = true;
         $_SESSION["id"] = $this->id;

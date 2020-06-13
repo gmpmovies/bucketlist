@@ -7,11 +7,11 @@ $_SESSION = array();
 
 //Destroy the cookies
 $hour=time()-3600*24*36000;
-setcookie('userid', $this->id, $hour);
-setcookie('username', $this->username, $hour);
-setcookie('firstname', $this->firstname, $hour);
-setcookie('lastname', $this->lastname, $hour);
-setcookie('email', $this->email, $hour);
+setcookie('userid', "", $hour);
+setcookie('username', "", $hour);
+setcookie('firstname', "", $hour);
+setcookie('lastname', "", $hour);
+setcookie('email', "", $hour);
 setcookie('active', 1, $hour);
 
 // Destroy the session.
