@@ -120,8 +120,6 @@ class setSessionVars{
         setcookie('email', $this->email, $hour);
         setcookie('active', 1, $hour);
 
-        error_log("This is the username: " . $_COOKIE["id"] . " " . $_COOKIE["username"]);
-
         // Redirect user to welcome page
         header("location: /bucketlist/feed.php");
     }

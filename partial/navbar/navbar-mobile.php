@@ -81,7 +81,7 @@ if($mobile_navbar_user->get_number_notifications() >= 1){
                         <a href=\"/bucketlist/account.php?userid=" . $navbar_id . "?>\" class='navbar-mobile-link mobile-navbar-js-loading'>
                             <div style='padding-top: 6px;'>
                                 <div class=\"navbar-photo-container " . (($current_page == "self")?'profile_active':'') . "\">
-                                    <img class=\"navbar-profile-photo\" src=\"/uploads/" . $mobile_navbar_user->get_File()->get_filename() . "\"/>
+                                    <img class=\"navbar-profile-photo\" src=\"/bucketlist/uploads/" . $mobile_navbar_user->get_File()->get_filename() . "\"/>
                                 </div>
                             </div>
                         </a>
