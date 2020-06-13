@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Check input errors before updating the database
-    if(isset($new_password_err) && isset($confirm_password_err)){
+    if($new_password_err == "" && $confirm_password_err == ""){
         // Prepare an update statement
         $sql = "UPDATE users SET password = ? WHERE id = ?";
 
@@ -47,12 +47,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt->bind_param("si", $param_password, $param_id);
 
             // Set parameters
+            error_log($new_password);
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
             $param_id = $_SESSION["id"];
 
             // Attempt to execute the prepared statement
             if($stmt->execute()){
                 // Password updated successfully. Destroy the session, and redirect to login page
+
+                //Destroy cookies
+                $hour=time()-3600*24*36000;
+                setcookie('userid', "", $hour);
+                setcookie('username', "", $hour);
+                setcookie('firstname', "", $hour);
+                setcookie('lastname', "", $hour);
+                setcookie('email', "", $hour);
+                setcookie('active', 1, $hour);
+
                 session_destroy();
                 header("location: /bucketlist/login.php");
                 exit();
