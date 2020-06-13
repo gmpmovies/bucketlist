@@ -104,23 +104,23 @@ class setSessionVars{
     public function setSessionVariables(){
         session_start();
         // Store data in session variables
-        error_log("I'm about to store some session vars");
         $_SESSION["loggedin"] = true;
         $_SESSION["id"] = $this->id;
         $_SESSION["username"] = $this->username;
         $_SESSION["firstname"] = $this->firstname;
         $_SESSION["lastname"] = $this->lastname;
         $_SESSION["email"] = $this->email;
-        error_log("This is the username: " . $_SESSION["id"]);
 
         // Set cookies
         $hour=time()+3600*24*36000;
-        setcookie('userid', $this->id, $hour);
+        setcookie('id', $this->id, $hour);
         setcookie('username', $this->username, $hour);
         setcookie('firstname', $this->firstname, $hour);
         setcookie('lastname', $this->lastname, $hour);
         setcookie('email', $this->email, $hour);
         setcookie('active', 1, $hour);
+
+        error_log("This is the username: " . $_COOKIE["id"] . " " . $_COOKIE["username"]);
 
         // Redirect user to welcome page
         header("location: /bucketlist/feed.php");
