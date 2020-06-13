@@ -37,12 +37,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_isPrivate = $isPrivate;
 
             if($stmt->execute()){
-                echo "Get ID";
                 $new_id = $mysqli->insert_id;
-                echo "after get ID";
 //                $stmt->close();
                 $sql2 = "INSERT INTO bucket_users (bucketid, userid, isAdmin) VALUES (?, ?, ?)";
-                echo $new_id;
+
                 if($stmt2 = $mysqli->prepare($sql2)){
                     $stmt2->bind_param("iii", $param_bucketid, $param_userid, $param_isAdmin);
                     $param_bucketid = $new_id;
@@ -50,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     $param_isAdmin = True;
 
                     if($stmt2->execute()){
-                        echo("ececute");
+
                     } else {
                         echo("There was an issue with the second SQL command");
                     }
