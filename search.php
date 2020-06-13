@@ -79,14 +79,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <div class=\"row\">
                                     <div class=\"col-sm-2 col-xs-3\" style=\"text-align: center;\">
                                         <div class=\"profile_pic_container_search verticle_align\">
-                                            <a href=\"/account.php?userid=" . $user->get_id() . "\">
-                                                <img class=\"profile_pic\" src=\"/uploads/" . $user->get_File()->get_filename() . "\">
+                                            <a href=\"/bucketlist/account.php?userid=" . $user->get_id() . "\">
+                                                <img class=\"profile_pic\" src=\"/bucketlist/uploads/" . $user->get_File()->get_filename() . "\">
                                             </a>
                                         </div>
                                     </div>
                                     <div class=\"col-sm-6 col-xs-9\">
                                         <div class=\"search-info\">
-                                            <a href=\"/account.php?userid=" . $user->get_id() . "\"> " . $user->get_firstname() . " " . $user->get_lastname() . "</a>
+                                            <a href=\"/bucketlist/account.php?userid=" . $user->get_id() . "\"> " . $user->get_firstname() . " " . $user->get_lastname() . "</a>
                                             <p style='font-size: 12px; margin-top: -4px;' class=\"search-text\">@" . $user->get_username() . "</p>
                                             <p class=\"search-text\">Member Since: " . date_format($date, 'F d, Y') . "</p>
                                         </div>
