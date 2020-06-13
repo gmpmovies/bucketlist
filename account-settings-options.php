@@ -14,21 +14,21 @@
 <div class="default-margin">
     <h1 style="text-align: center;">Account Settings</h1>
     <div class="feed-container">
-        <a href="/account_settings.php">
+        <a href="/bucketlist/account_settings.php">
             <div class="settings-item">
                 <p class="settings-text">Update Profile Picture</p>
                 <img class="settings-icon" src="/bucketlist/assets/icons/next.svg"/>
             </div>
         </a>
         <hr>
-        <a href="/reset-password.php">
+        <a href="/bucketlist/reset-password.php">
             <div class="settings-item">
                 <p class="settings-text">Reset Password</p>
                 <img class="settings-icon" src="/bucketlist/assets/icons/next.svg"/>
             </div>
         </a>
         <hr>
-        <a href="/logout.php">
+        <a href="/bucketlist/logout.php">
             <div class="settings-item">
                 <p class="settings-text">Logout</p>
                 <img class="settings-icon" src="/bucketlist/assets/icons/next.svg"/>
