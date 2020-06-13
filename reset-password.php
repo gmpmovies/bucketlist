@@ -47,7 +47,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt->bind_param("si", $param_password, $param_id);
 
             // Set parameters
-            error_log($new_password);
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
             $param_id = $_SESSION["id"];
 
