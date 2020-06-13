@@ -42,9 +42,9 @@ function retrieveContent(){
                 const content = $feedContainer.append(msg);
                 const newContent = content.find('#feed-batch-' + offset);
 
-                newContent.find('.all-posts').on('init', function(event, slick){
-                    setTimeout(function(){newContent.find('.slick-list').css('height', 'auto');}, 100);
-                });
+                // newContent.find('.all-posts').on('init', function(event, slick){
+                //     setTimeout(function(){newContent.find('.slick-list').css('height', 'auto');}, 100);
+                // });
 
                 newContent.find('.all-posts').slick({
                     adaptiveHeight: true,
