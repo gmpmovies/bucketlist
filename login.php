@@ -20,6 +20,7 @@ $username_err = $password_err = "";
 
 if(isset($_COOKIE['username'])){
     $setSession = new setSessionVars($_COOKIE['id'], $_COOKIE['username'], $_COOKIE['firstname'], $_COOKIE['lastname'], $_COOKIE['email']);
+    $setSession->setSessionVariables();
 }
 
 // Processing form data when form is submitted
@@ -103,12 +104,14 @@ class setSessionVars{
     public function setSessionVariables(){
         session_start();
         // Store data in session variables
+        error_log("I'm about to store some session vars");
         $_SESSION["loggedin"] = true;
         $_SESSION["id"] = $this->id;
         $_SESSION["username"] = $this->username;
         $_SESSION["firstname"] = $this->firstname;
         $_SESSION["lastname"] = $this->lastname;
         $_SESSION["email"] = $this->email;
+        error_log("This is the username: " . $this->username);
 
         // Set cookies
         $hour=time()+3600*24*36000;
