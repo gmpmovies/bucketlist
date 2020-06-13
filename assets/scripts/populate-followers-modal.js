@@ -8,7 +8,7 @@ $('#followersModal, #followingModal').on('show.bs.modal', function (event) {
         $this.data('clicked', 1);
         $.ajax({
             type: "POST",
-            url: "/actions/get_followers_modal.php",
+            url: "/bucketlist/actions/get_followers_modal.php",
             data: ({userid: userid, type: type}),
 
             beforeSend(jqXHR, settings) {
@@ -34,12 +34,12 @@ $('#followersModal, #followingModal').on('show.bs.modal', function (event) {
                         "                    <div class=\"col-3\">\n" +
                         "                        <a href=\"/account.php?userid=" + value["id"] + "\">\n" +
                         "                            <div class=\"profile_pic_container_search\">\n" +
-                        "                                <img class=\"profile_pic\" src=\"/uploads/" + value["File"]["filename"] + "\"/>\n" +
+                        "                                <img class=\"profile_pic\" src=\"/bucketlist/uploads/" + value["File"]["filename"] + "\"/>\n" +
                         "                            </div>\n" +
                         "                        </a>\n" +
                         "                    </div>\n" +
                         "                    <div class=\"col-5\">\n" +
-                        "                        <a href=\"/account.php?userid=" + value["id"] + "\">\n" +
+                        "                        <a href=\"/bucketlist/account.php?userid=" + value["id"] + "\">\n" +
                         "                            <p class=\"text-ellipsis modal-account-popup-text\">" + value["firstname"] + " " + value["lastname"] + "</p>\n" +
                         "                            <p class=\"text-ellipsis modal-account-popup-text\">Member Since: " + value["created_at"] + " </p>\n" +
                         "                        </a>\n" +

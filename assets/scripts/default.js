@@ -9,7 +9,7 @@ $('body').on('click', '.js_follow_user', function(){
         console.log("Following User " + userid);
         $.ajax({
             type: "POST",
-            url: "/actions/follow-user.php",
+            url: "/bucketlist/actions/follow-user.php",
             data: ({userid: userid}),
 
             beforeSend(jqXHR, settings) {

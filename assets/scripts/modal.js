@@ -249,7 +249,7 @@ $('#bucket-item-post').on('submit', function(e){
         if($('.js-post-upload-field')[0].files[0].size <= 10485760){
             $.ajax({
                 type: "POST",
-                url: "/actions/make-post.php",
+                url: "/bucketlist/actions/make-post.php",
                 // data: ({userid: userid, bucketid: bucketid, isAdmin: isAdmin}),
                 data: formData,
                 enctype: 'multipart/form-data',

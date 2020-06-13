@@ -11,7 +11,7 @@ $('.js-add-user-to-bucket').on('click', function(){
         $this.data('clicked', 1);
         $.ajax({
             type: "POST",
-            url: "/actions/share-bucket.php",
+            url: "/bucketlist/actions/share-bucket.php",
             data: ({userid: userid, bucketid: bucketid, isAdmin: isAdmin}),
 
             beforeSend(jqXHR, settings) {

@@ -6,7 +6,7 @@ $('.js-user-search-form').on('keyup', function(){
     if(searchterm != ""){
         $.ajax({
             type: "POST",
-            url: "/actions/user_search.php",
+            url: "/bucketlist/actions/user_search.php",
             data: ({searchterm: searchterm}),
 
             beforeSend(jqXHR, settings) {
@@ -34,14 +34,14 @@ $('.js-user-search-form').on('keyup', function(){
                             "              <div class='row'>\n" +
                             "                <div class=\"col-sm-2 col-2 \" style=\"text-align: center;\">\n" +
                             "                    <div class=\"profile_pic_container_search verticle_align\">\n" +
-                            "                        <a href=\"/account.php?userid=" + value["id"] + "\">\n" +
-                            "                            <img class=\"profile_pic\" src=\"/uploads/" + value['File']['filename'] + "\">\n" +
+                            "                        <a href=\"/bucketlist/account.php?userid=" + value["id"] + "\">\n" +
+                            "                            <img class=\"profile_pic\" src=\"/bucketlist/uploads/" + value['File']['filename'] + "\">\n" +
                             "                        </a>\n" +
                             "                    </div>\n" +
                             "                </div>\n" +
                             "                <div class=\"col-sm-6 col-6\">\n" +
                             "                    <div class=\"search-info\">\n" +
-                            "                        <a class='mobile-search-text' href=\"/account.php?userid=" + value["id"] + "\">"+ value["firstname"] + " " + value["lastname"] + "</a>\n" +
+                            "                        <a class='mobile-search-text' href=\"/bucketlist/account.php?userid=" + value["id"] + "\">"+ value["firstname"] + " " + value["lastname"] + "</a>\n" +
                             "                        <p style='font-size: 12px; margin-top: -4px;' class=\"search-text mobile-search-text\">@" + value["username"] + "</p>\n" +
                             "                        <p class=\"search-text mobile-search-text\">Member Since: " + value["created_at"] + "</p>\n" +
                             "                    </div>\n" +

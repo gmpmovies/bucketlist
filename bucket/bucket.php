@@ -47,7 +47,7 @@
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <div class="feed-container">
-                <a class='btn btn-secondary btn-small' href='/feed.php'>Back</a>
+                <a class='btn btn-secondary btn-small' href='/bucketlist/feed.php'>Back</a>
                 <hr>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . '?bucketid=' . $bucket_id; ?>" method="post">
                     <div class="form-group <?php echo (!empty($item_name_err)) ? 'has-error' : ''; ?>">
@@ -66,7 +66,7 @@
                     </div>
                 </form>
                 <div style="text-align: center;">
-                    <?php echo"<a style='margin-top: 10px;' class='btn-small btn-outline-dark btn' href='/bucket/share_bucket.php?bucketid=" . $bucket_id . "'>Add Members</a>" ?>
+                    <?php echo"<a style='margin-top: 10px;' class='btn-small btn-outline-dark btn' href='/bucketlist/bucket/share_bucket.php?bucketid=" . $bucket_id . "'>Add Members</a>" ?>
                 </div>
                 <div class="outline-container" style="text-align: center;">
                     <h1 style="font-size: 22px;">Members</h1>
@@ -77,7 +77,7 @@
                         <p style=\"margin: 0px 10px 10px 10px;\">
                             <a class=\"profile_pic_link\" href=\"/account.php?userid=" . $member->get_id() . "\">
                                 <span class=\"profile_pic_container_search \" style=\"vertical-align: middle;\">
-                                    <img src='/uploads/" . $member->get_File()->get_filename() . "' class=\"profile_pic\"/>
+                                    <img src='/bucketlist/uploads/" . $member->get_File()->get_filename() . "' class=\"profile_pic\"/>
                                 </span> 
                                 <span>" . $member->get_firstname() . " " . $member->get_lastname() . "</span>
                             </a>
@@ -116,7 +116,7 @@
                                             <p class='bl_title'>" . $item->get_item_name() . "</p>
                                             <p class='bl_desc'>" . $item->get_item_desc() . "</p>
                                             <div class='profile_pic_container_xsm right-corner'>
-                                                <img class='profile_pic' src='/uploads/" . $item->get_Owner()->get_File()->get_filename() . "'>
+                                                <img class='profile_pic' src='/bucketlist/uploads/" . $item->get_Owner()->get_File()->get_filename() . "'>
                                             </div>
                                             <input class='modal_data_fields' type='hidden' data-user-id='" . $_SESSION['id'] . "' data-owner-id='" . $item->get_Owner()->get_id() . "' data-has-posted='NONE' data-add-memory='0' data-owner-name='" . $item->get_Owner()->get_firstname() . " " . htmlspecialchars($item->get_Owner()->get_lastname(False)) . "' data-username='" . $item->get_Owner()->get_username() . "' data-created-date='" . date_format($date, 'F d, Y') . "' data-item-id='" . $item->get_id() . "'>
                                         </div>
@@ -146,7 +146,7 @@
                                             <p class='bl_desc'>" . $item->get_item_desc() . "</p>
                                             " . (($has_posted)?'':'<p class=\'bl_desc bl_desc_add_memory\' style="color: red;">Click to add your memory!</p>') . "
                                             <div class='profile_pic_container_xsm right-corner'>
-                                                <img class='profile_pic' src='/uploads/" . $item->get_Owner()->get_File()->get_filename() . "'>
+                                                <img class='profile_pic' src='/bucketlist/uploads/" . $item->get_Owner()->get_File()->get_filename() . "'>
                                             </div>
                                             <input class='modal_data_fields' type='hidden' data-user-id='" . $_SESSION['id'] . "' data-has-posted='" . $has_posted . "' data-add-memory='1' data-owner-id='" . $item->get_Owner()->get_id() . "' data-owner-name='" . $item->get_Owner()->get_firstname() . " " . htmlspecialchars($item->get_Owner()->get_lastname(False)) . "' data-username='" . $item->get_Owner()->get_username() . "' data-created-date='" . date_format($date, 'F d, Y') . "' data-item-id='" . $item->get_id() . "'>
                                         </div>

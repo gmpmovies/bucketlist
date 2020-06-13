@@ -5,7 +5,7 @@ $('.single-notification').on('click', function(){
     if(active === 1){
         $.ajax({
             type: "POST",
-            url: "/actions/navigate_notification.php",
+            url: "/bucketlist/actions/navigate_notification.php",
             data: ({url: url, id: id}),
 
             beforeSend(jqXHR, settings) {
