@@ -52,6 +52,7 @@ $following = Followers::getAllFollowers($account_id, True);
                                 
                                 ";
             }
+            echo "<div class='btn btn-success' data-toggle='modal' data-target='#followersModal'>Test</div>";
         } else {
             echo"
                             <p style='text-align: center;'>" . $user->get_firstname() . " is not following anybody.</p>
