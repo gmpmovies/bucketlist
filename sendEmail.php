@@ -19,7 +19,7 @@ $txt = "<html>
 </table>
 </body>
 </html>";
-$headers = "From: Gobinit Support <support@gobinit.com>\r\n";
+$headers = "From: Gobinit Support <support@gobinit.com>\r\n" . "Content-type:text/html;charset=UTF-8" . "\r\n";;
 
 mail($to,$subject,$txt,$headers);
 ?>
