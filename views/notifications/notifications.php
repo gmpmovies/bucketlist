@@ -49,7 +49,7 @@
                 echo '
                         <div data-active="' . $notification->get_is_active() . '" data-url="' . $notification->get_referral() . '" data-id="' . $notification->get_id() . '" class="single-notification ' . (($notification->get_is_active())?'notification-container-unread':'notification-container-read') . '">
                             <div class="profile_pic_container" style="height: 50px; float: left; margin-right: 10px;">
-                                <img class="profile_pic" src="/uploads/' . $notification->get_image() . '">
+                                <img class="profile_pic" src="/bucketlist/uploads/' . $notification->get_image() . '">
                             </div>
                             <p class="notification-text">'. $notification->get_notification_title() .'</p>
                             <p style="font-size: 9px; margin: -10px 0px 0px 0px; padding-left: 60px;">'. $time_diff_display .'</p>

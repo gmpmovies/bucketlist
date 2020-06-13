@@ -77,7 +77,6 @@ class Notifications {
             $stmt->bind_param('ii', $param_is_active, $param_id);
             $param_is_active = False;
             $param_id = $id;
-            error_log("I'M HERE DEACTIVATING STUFF");
             if($stmt->execute()){
                 return True;
             }
@@ -177,18 +176,18 @@ class Notifications {
     }
     function set_notification_title($notification_type){
         $notification_title = '';
-        if($notification_type == 1){
+        if($notification_type == 1){ //Item was checked off
             $this->Trigger = Users::getUser($this->triggered_by);
             $this->Content = Post::getPost($this->content_id);
             $notification_title = "<strong>" . $this->Trigger->get_firstname() . " " . $this->Trigger->get_lastname() . "</strong> checked off " . $this->Content->get_Item()->get_item_name() . " from " . $this->Content->get_Item()->get_Bucket()->get_title() . ". Click here to add your memory now!";
-            $referral = "/bucket/bucket.php?bucketid=" . $this->Content->get_Item()->get_Bucket()->get_id() . "&addmemory=" . $this->Content->get_itemID();
+            $referral = "/bucketlist/bucket/bucket.php?bucketid=" . $this->Content->get_Item()->get_Bucket()->get_id() . "&addmemory=" . $this->Content->get_itemID();
             $this->set_referral($referral);
             $this->set_image($this->Trigger->get_File()->get_filename());
-        } elseif($notification_type == 2) {
+        } elseif($notification_type == 2) { //Item was added
             $this->Trigger = Users::getUser($this->triggered_by);
             $this->Content = Listitem::getListItem($this->content_id);
             $notification_title = "<strong>" . $this->Trigger->get_firstname() . " " . $this->Trigger->get_lastname() . "</strong> added " . $this->Content->get_item_name() . " to <strong>" . $this->Content->get_Bucket()->get_title() . "</strong>.";
-            $referral = "/bucket/bucket.php?bucketid=" . $this->Content->get_Bucket()->get_id() . "&addmemory=" . $this->Content->get_id();
+            $referral = "/bucketlist/bucket/bucket.php?bucketid=" . $this->Content->get_Bucket()->get_id() . "&addmemory=" . $this->Content->get_id();
             $this->set_referral($referral);
             $this->set_image($this->Trigger->get_File()->get_filename());
         }
