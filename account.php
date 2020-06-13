@@ -46,7 +46,7 @@ error_log("I AM WRITING SOMETHING NEW HERE");
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <title><?php echo $user->get_firstname() . " " . $user->get_lastname(0) ?> Account</title>
     <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
-    <link rel="stylesheet" href="assets/styles/account.css"/>
+    <link rel="stylesheet" href="/bucketlist/assets/styles/account.css"/>
 </head>
 <body>
 <?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
@@ -61,10 +61,10 @@ error_log("I AM WRITING SOMETHING NEW HERE");
                     echo"
                     <div class='account_container'>
                         <div class='profile_pic_container_account' style='position: relative;'>
-                            " . (($isCurrentUser == True)?'<a href="/account_settings.php"><p class=\'update_profile_text\'>Update Image</p><div class=\'update_profile_bg\'></div></a>':'') . "
+                            " . (($isCurrentUser == True)?'<a href="/bucketlist/account_settings.php"><p class=\'update_profile_text\'>Update Image</p><div class=\'update_profile_bg\'></div></a>':'') . "
                             
                             
-                            <img class='profile_pic' src=\"/uploads/" . $user->get_File()->get_filename() . "\" />
+                            <img class='profile_pic' src=\"/bucketlist/uploads/" . $user->get_File()->get_filename() . "\" />
                             
                         </div>
                         <p class='name'>" . $user->get_firstname() . " " . $user->get_lastname() . "</p>
@@ -82,7 +82,7 @@ error_log("I AM WRITING SOMETHING NEW HERE");
                             <p class='number-follow'>Following</p>  
                         </div>
                     </div>
-                    " . (($isCurrentUser == True)?'<div style="text-align: center; margin-top: 5px;"><a href="/account-settings-options.php" style="width: 100%;" class="btn btn-outline-secondary">Account Settings</a></div>':'') . "
+                    " . (($isCurrentUser == True)?'<div style="text-align: center; margin-top: 5px;"><a href="/bucketlist/account-settings-options.php" style="width: 100%;" class="btn btn-outline-secondary">Account Settings</a></div>':'') . "
                     "
 
                 ?>
@@ -99,13 +99,13 @@ error_log("I AM WRITING SOMETHING NEW HERE");
                     <div class=\"feed-container\">
                         <p class='center_title'>Shared Buckets</p>
                         <div class=\"bucket-container\">
-                            <a href=\"/bucket/bucket.php?bucketid=" . $bucket->get_id() . "\">" . $bucket->get_title() . "</a>
+                            <a href=\"/bucketlist/bucket/bucket.php?bucketid=" . $bucket->get_id() . "\">" . $bucket->get_title() . "</a>
                             <p>Owned By: </p>
                             
                             <p style=\"margin: 0px 10px 10px 10px;\">
-                                <a class=\"profile_pic_link\" href=\"/account.php?userid=" .$bucket->get_User()->get_id() . "\">
+                                <a class=\"profile_pic_link\" href=\"/bucketlist/account.php?userid=" .$bucket->get_User()->get_id() . "\">
                                     <span class=\"profile_pic_container_search \" style=\"vertical-align: middle;\">
-                                        <img src='/uploads/" . $bucket->get_User()->get_File()->get_filename() . "' class=\"profile_pic\"/>
+                                        <img src='/bucketlist/uploads/" . $bucket->get_User()->get_File()->get_filename() . "' class=\"profile_pic\"/>
                                     </span> 
                                     <span>" . $bucket->get_User()->get_firstname() . " " . $bucket->get_User()->get_lastname() . "</span>
                                 </a>
@@ -127,7 +127,7 @@ error_log("I AM WRITING SOMETHING NEW HERE");
                     <p>
                         <a class="profile_pic_link" href="#">
                     <span class="profile_pic_container_search" style="vertical-align: middle">
-                        <img src="/uploads/default.jpeg" class="profile_pic">
+                        <img src="/bucketlist/uploads/default.jpeg" class="profile_pic">
                     </span>
                             <span> ... </span>
                         </a>
