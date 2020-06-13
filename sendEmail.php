@@ -1,6 +1,6 @@
 <?php
 $to = "gmpmovies@gmail.com";
-$subject = "Gobinit Password Reset";
+$subject = "This is a Test";
 $txt = "<html>
 <head>
 <title>HTML email</title>
