@@ -75,7 +75,7 @@
                         foreach($members as $member){
                             echo "
                         <p style=\"margin: 0px 10px 10px 10px;\">
-                            <a class=\"profile_pic_link\" href=\"/account.php?userid=" . $member->get_id() . "\">
+                            <a class=\"profile_pic_link\" href=\"/bucketlist/account.php?userid=" . $member->get_id() . "\">
                                 <span class=\"profile_pic_container_search \" style=\"vertical-align: middle;\">
                                     <img src='/bucketlist/uploads/" . $member->get_File()->get_filename() . "' class=\"profile_pic\"/>
                                 </span> 

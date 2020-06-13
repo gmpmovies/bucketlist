@@ -25,7 +25,7 @@ $('#bucketModal').on('show.bs.modal', function (event) {
 
     modal.find('.modal_item_created_date').text('Created On: ' + created_date);
     modal.find('img').attr('src', img_path);
-    modal.find('.modal_owner_container a').attr('href', '/account.php?userid=' + owner_id);
+    modal.find('.modal_owner_container a').attr('href', '/bucketlist/account.php?userid=' + owner_id);
     modal.find('.modal_owner_name').text(owner_name);
     modal.find('.js-bucket-item-modal-post').data('itemid', item_id);
     modal.find("#js-is-post-video").val("photo");
