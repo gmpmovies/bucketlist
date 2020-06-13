@@ -94,7 +94,7 @@ class setSessionVars{
     private $email;
 
     public function __construct($id, $username, $firstname, $lastname, $email){
-        $this->$id = $id;
+        $this->id = $id;
         $this->username =$username;
         $this->firstname = $firstname;
         $this->lastname = $lastname;
