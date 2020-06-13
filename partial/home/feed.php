@@ -12,7 +12,7 @@
         <p>
             <a class="profile_pic_link" href="#">
                     <span class="profile_pic_container_search" style="vertical-align: middle">
-                        <img src="/uploads/default.jpeg" class="profile_pic">
+                        <img src="/bucketlist/uploads/default.jpeg" class="profile_pic">
                     </span>
                 <span> ... </span>
             </a>
