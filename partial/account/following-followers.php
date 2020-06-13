@@ -24,6 +24,7 @@ $following = Followers::getAllFollowers($account_id, True);
                         
                         ";
             }
+            echo '<div style=\"text-align: center; margin-top: 5px;\"><a href="" data-toggle="modal" data-target="#followersModal" style=\"width: 100%;\" class=\"btn btn-outline-secondary\">See All</a></div>';
         } else {
             echo"
                     <p style='margin: auto;;'>" . $user->get_firstname() . " " . $user->get_lastname() . " currently has no followers.</p>
@@ -52,7 +53,6 @@ $following = Followers::getAllFollowers($account_id, True);
                                 
                                 ";
             }
-            echo "<div class='btn btn-success' data-toggle='modal' data-target='#followersModal'>Test</div>";
         } else {
             echo"
                             <p style='text-align: center;'>" . $user->get_firstname() . " is not following anybody.</p>
