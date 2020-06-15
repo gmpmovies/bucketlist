@@ -17,8 +17,8 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 
                 <h1 style="font-size: 25px; margin-top: 15px;"><img src="/bucketlist/assets/icons/favicon-32x32.png"> Buckets</h1>
                 <!-- Tabs Titles -->
-                <h2 class="active pointerHover"> Sign In </h2>
-                <h2 class="inactive underlineHover pointerHover">Sign Up </h2>
+                <h2 class="active pointerHover js-sign-in"> Sign In </h2>
+                <h2 class="inactive underlineHover pointerHover js-register">Sign Up </h2>
 
 
 <!--                <div class="fadeIn first">-->
@@ -26,13 +26,26 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 <!--                </div>-->
 
                 <!-- Login Form -->
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                    <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
-<!--                    <span class="help-block">--><?php //echo $username_err; ?><!--</span>-->
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-<!--                    <span class="help-block">--><?php //echo $password_err; ?><!--</span>-->
-                    <input type="submit" class="fadeIn fourth" value="Log In">
-                </form>
+                <div class="js-login-form d-block">
+                    <form>
+                        <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
+<!--                        <span class="help-block">--><?php //echo $username_err; ?><!--</span>-->
+                        <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+<!--                        <span class="help-block">--><?php //echo $password_err; ?><!--</span>-->
+                        <input type="submit" class="fadeIn fourth" value="Log In">
+                    </form>
+                </div>
+
+                <!-- Register Form -->
+                <div class="js-register-form d-none">
+                    <form>
+                        <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
+<!--                        <span class="help-block">--><?php //echo $username_err; ?><!--</span>-->
+                        <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+<!--                        <span class="help-block">--><?php //echo $password_err; ?><!--</span>-->
+                        <input type="submit" class="fadeIn fourth" value="Register">
+                    </form>
+                </div>
 
                 <!-- Remind Passowrd -->
                 <div id="formFooter">
@@ -46,6 +59,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
+<script src="/bucketlist/assets/scripts/login.js"></script>
 </body>
 
 </html>
