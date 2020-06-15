@@ -2,6 +2,10 @@
 
 /* BASIC */
 
+.pointerHover:hover{
+    cursor: pointer;
+}
+
 html {
     background-color: #56baed;
 }

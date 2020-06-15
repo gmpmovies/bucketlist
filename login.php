@@ -17,8 +17,8 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 
                 <h1 style="font-size: 25px; margin-top: 15px;"><img src="/bucketlist/assets/icons/favicon-32x32.png"> Buckets</h1>
                 <!-- Tabs Titles -->
-                <h2 class="active"> Sign In </h2>
-                <h2 class="inactive underlineHover">Sign Up </h2>
+                <h2 class="active pointerHover"> Sign In </h2>
+                <h2 class="inactive underlineHover pointerHover">Sign Up </h2>
 
 
 <!--                <div class="fadeIn first">-->
