@@ -46,6 +46,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
+<script src="/bucketlist/assets/scripts/login.js"></script>
 </body>
 
 </html>
