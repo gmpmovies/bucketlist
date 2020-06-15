@@ -11,8 +11,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 </head>
 <body>
 <?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
-<div class="">
-    <div>
+
         <div class="wrapper fadeInDown">
             <div id="formContent">
                 <!-- Tabs Titles -->
@@ -41,8 +40,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
             </div>
         </div>
 
-    </div>
-</div>
+
 
 
 <?php require_once "/home1/gobinitc/public_html/bucketlist/html_body_scripts.php"?>
