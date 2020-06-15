@@ -19,16 +19,11 @@
         <h2 class="active pointerHover js-sign-in"> Sign In </h2>
         <h2 class="inactive underlineHover pointerHover js-register">Sign Up </h2>
 
-
-        <!--                <div class="fadeIn first">-->
-        <!--                    <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />-->
-        <!--                </div>-->
-
         <!-- Login Form -->
         <h2>Password Recovery</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <input type="text" id="email" class="fadeIn second" name="email" placeholder="enter your username or email">
-            <input type="submit" class="fadeIn fourth" value="Send Email">
+            <input type="text" id="email" class="fadeIn first" name="email" placeholder="enter your username or email">
+            <input type="submit" class="fadeIn second" value="Send Email">
             <span class="help-block d-block" style="color:red;"><?php #echo $status; ?></span>
         </form>
 

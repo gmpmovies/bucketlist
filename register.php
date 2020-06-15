@@ -30,10 +30,10 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/register.php";
                 <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
                 <input type="text" id="firstname" class="fadeIn third" name="firstname" placeholder="first name">
                 <input type="text" id="lastname" class="fadeIn fourth" name="lastname" placeholder="last name">
-                <input type="text" id="email" class="fadeIn fourth" name="email" placeholder="email">
-                <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-                <input type="password" id="confirm_password" class="fadeIn third" name="confirm_password" placeholder="confirm password">
-                <input type="submit" class="fadeIn fourth" value="Sign Up">
+                <input type="text" id="email" class="fadeIn fifth" name="email" placeholder="email">
+                <input type="password" id="password" class="fadeIn sixth" name="password" placeholder="password">
+                <input type="password" id="confirm_password" class="fadeIn seventh" name="confirm_password" placeholder="confirm password">
+                <input type="submit" class="fadeIn eighth" value="Sign Up">
                 <span class="help-block d-block" style="color:red;"><?php echo $err; ?></span>
             </form>
 
