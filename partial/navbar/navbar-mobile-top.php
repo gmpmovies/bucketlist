@@ -17,7 +17,7 @@
     }
     ?>
     <div class="navbar-img-container">
-        <p><img src="/favicon-32x32.png"> BLit</p>
+        <p><img src="/bucketlist/assets/icons/favicon-32x32.png"> BLit</p>
     </div>
 
 </div>

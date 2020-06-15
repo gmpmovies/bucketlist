@@ -14,6 +14,8 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 
         <div class="login-wrapper fadeInDown">
             <div id="formContent">
+
+                <h1><img src="/bucketlist/assets/icons/favicon-32x32.png"> Bucketlist</h1>
                 <!-- Tabs Titles -->
                 <h2 class="active"> Sign In </h2>
                 <h2 class="inactive underlineHover">Sign Up </h2>
@@ -24,7 +26,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 <!--                </div>-->
 
                 <!-- Login Form -->
-                <form>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
                     <span class="help-block"><?php echo $username_err; ?></span>
                     <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
