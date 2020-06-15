@@ -32,7 +32,7 @@ h2 {
 
 /* STRUCTURE */
 
-.wrapper {
+.login-wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;

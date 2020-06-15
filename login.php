@@ -12,7 +12,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 <body>
 <?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 
-        <div class="wrapper fadeInDown">
+        <div class="login-wrapper fadeInDown">
             <div id="formContent">
                 <!-- Tabs Titles -->
                 <h2 class="active"> Sign In </h2>
