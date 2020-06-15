@@ -1,6 +1,6 @@
 <?php
 require_once "/home1/gobinitc/public_html/bucketlist/config.php";
-require_once "/home1/gobinitc/public_html/bucketlist/send_email.php";
+require_once "/home1/gobinitc/public_html/bucketlist/actions/send_email.php";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $to_email = "";
     $status = "";
