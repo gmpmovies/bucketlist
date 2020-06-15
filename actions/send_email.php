@@ -37,7 +37,7 @@ class SendEmail{
                     </body>
                 </html>";
 
-        mail($this->to,$this->subject,$txt,$this->headers);
+        mail($this->to,$this->subject,$txt,$this->header);
     }
 }
 
