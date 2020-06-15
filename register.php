@@ -39,7 +39,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/register.php";
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <a class="underlineHover" href="/forgot-password.php">Forgot Password?</a>
+                <a class="underlineHover" href="/bucketlist/forgot-password.php">Forgot Password?</a>
             </div>
 
         </div>
