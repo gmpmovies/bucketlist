@@ -1,7 +1,7 @@
 $(".js-sign-in").on('click', function(){
-    location.href('/bucketlist/login.php');
+    window.location.href('/bucketlist/login.php');
 });
 
 $(".js-register").on('click', function(){
-    location.href('/bucketlist/register.php');
+    window.location.href('/bucketlist/register.php');
 });

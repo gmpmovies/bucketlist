@@ -27,7 +27,7 @@ if(isset($_COOKIE['username'])){
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if username is empty
     if (!isset($_POST["username"]) || $_POST["password"] == "") {
-        $username_err = "Please enter username.";
+        $username_err = "Please enter your username.";
     } else {
         $username = strtolower(trim($_POST["username"]));
     }
