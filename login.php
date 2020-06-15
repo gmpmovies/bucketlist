@@ -28,10 +28,10 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
                 <!-- Login Form -->
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
-                    <span class="help-block d-block"><?php echo $username_err; ?></span>
                     <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-                    <span class="help-block d-block"><?php echo $password_err; ?></span>
                     <input type="submit" class="fadeIn fourth" value="Log In">
+                    <span class="help-block d-block"><?php echo $username_err; ?></span>
+                    <span class="help-block d-block"><?php echo $password_err; ?></span>
                 </form>
 
                 <!-- Remind Passowrd -->
