@@ -46,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $headers = "From: Gobinit Support <support@gobinit.com>\r\n" . "Content-type:text/html;charset=UTF-8" . "\r\n";
         $subject = "Gobinit Password Reset";
         $from = "support@gobinit.com";
-        $email = new SendEmail($email, $subject, $from, $firstname);
+        $email = new SendEmail($email, $subject, $from, $headers, $firstname);
         $email->SendEmailFromTemplate();
     }
 }
