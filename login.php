@@ -10,7 +10,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
     <link rel="stylesheet" href="/bucketlist/assets/styles/login.css">
 </head>
 <body>
-<?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
+<?php //require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
 
         <div class="login-wrapper fadeInDown">
             <div id="formContent">
