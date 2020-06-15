@@ -16,7 +16,7 @@
 
         <h1 style="font-size: 25px; margin-top: 15px;"><img src="/bucketlist/assets/icons/favicon-32x32.png"> Buckets</h1>
         <!-- Tabs Titles -->
-        <h2 class="active pointerHover js-sign-in"> Sign In </h2>
+        <h2 class="inactive pointerHover js-sign-in"> Sign In </h2>
         <h2 class="inactive underlineHover pointerHover js-register">Sign Up </h2>
 
         <!-- Login Form -->
