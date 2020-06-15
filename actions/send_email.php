@@ -6,7 +6,9 @@ class SendEmail{
     private $message;
     private $from;
 
-
+    function EmailTemplate(){
+        return '';
+    }
 }
 
 ?>
