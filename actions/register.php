@@ -15,7 +15,7 @@ $err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate username
-    if(!isset($_POST["username"])){
+    if(!isset($_POST["username"]) || $_POST["username"] == ""){
         $err = "Please enter a username.";
     } else{
         // Prepare a select statement
@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate password
-    if(!isset($_POST["password"])){
+    if(!isset($_POST["password"]) || $_POST["password"] == ""){
         $err = "Please enter a password.";
     } elseif(strlen(trim($_POST["password"])) < 6){
         $err = "Password must have atleast 6 characters.";
@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     // Validate confirm password
-    if(!isset($_POST["confirm_password"])){
+    if(!isset($_POST["confirm_password"]) || $_POST["confirm_password"] == ""){
         $err = "Please confirm password.";
     } else{
         $confirm_password = trim($_POST["confirm_password"]);
@@ -67,19 +67,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
-    if(!isset($_POST["firstname"])){
+    if(!isset($_POST["firstname"]) || $_POST["firstname"] == ""){
         $err = "Please enter your first name.";
     } else {
         $firstname = trim($_POST["firstname"]);
     }
 
-    if(!isset($_POST["lastname"])){
+    if(!isset($_POST["lastname"]) || $_POST["lastname"] == ""){
         $err = "Please enter your last name.";
     } else {
         $lastname = trim($_POST["lastname"]);
     }
 
-    if(!isset($_POST["email"])){
+    if(!isset($_POST["email"]) || $_POST["email"] == ""){
         $err = "Please enter your email.";
     } else {
         $email = trim($_POST["email"]);
