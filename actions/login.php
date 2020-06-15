@@ -26,8 +26,6 @@ if(isset($_COOKIE['username'])){
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if username is empty
-    error_log("test");
-    error_log($_POST["username"]);
     if (!isset($_POST["username"])) {
         $username_err = "Please enter username.";
     } else {
@@ -83,8 +81,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->close();
         }
     }
-
-    echo $username . $username_err;
 
     // Close connection
     $mysqli->close();
