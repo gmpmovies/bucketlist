@@ -27,21 +27,21 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 
                 <!-- Login Form -->
                 <div class="js-login-form d-block">
-                    <form>
+                    <form id="login-form">
                         <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
 <!--                        <span class="help-block">--><?php //echo $username_err; ?><!--</span>-->
                         <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
 <!--                        <span class="help-block">--><?php //echo $password_err; ?><!--</span>-->
-                        <input type="submit" class="fadeIn fourth" value="Log In">
+                        <input type="submit" class="fadeIn fourth js-submit-login" value="Log In">
                     </form>
                 </div>
 
                 <!-- Register Form -->
                 <div class="js-register-form d-none">
-                    <form>
-                        <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
+                    <form id="register-form">
+                        <input type="text" id="register-username" class="fadeIn second" name="username" placeholder="login">
 <!--                        <span class="help-block">--><?php //echo $username_err; ?><!--</span>-->
-                        <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+                        <input type="password" id="register-password" class="fadeIn third" name="password" placeholder="password">
 <!--                        <span class="help-block">--><?php //echo $password_err; ?><!--</span>-->
                         <input type="submit" class="fadeIn fourth" value="Register">
                     </form>
