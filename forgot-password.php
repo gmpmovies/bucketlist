@@ -20,7 +20,7 @@
         <h2 class="inactive underlineHover pointerHover js-register">Sign Up </h2>
 
         <!-- Login Form -->
-        <h2>Password Recovery</h2>
+        <h3>Password Recovery</h3>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <input type="text" id="email" class="fadeIn first" name="email" placeholder="enter your username or email">
             <input type="submit" class="fadeIn second" value="Send Email">
