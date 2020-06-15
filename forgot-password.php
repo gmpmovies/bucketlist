@@ -47,6 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $subject = "Gobinit Password Reset";
         $from = "support@gobinit.com";
         $email = new SendEmail($email, $subject, $from, $firstname);
+        $email->SendEmailFromTemplate();
     }
 }
 ?>
