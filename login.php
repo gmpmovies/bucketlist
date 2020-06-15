@@ -30,8 +30,8 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
                     <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
                     <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
                     <input type="submit" class="fadeIn fourth" value="Log In">
-                    <span class="help-block d-block"><?php echo $username_err; ?></span>
-                    <span class="help-block d-block"><?php echo $password_err; ?></span>
+                    <span class="help-block d-block" style="color:red;"><?php echo $username_err; ?></span>
+                    <span class="help-block d-block" style="color:red;"><?php echo $password_err; ?></span>
                 </form>
 
                 <!-- Remind Passowrd -->

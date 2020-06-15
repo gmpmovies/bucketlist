@@ -26,14 +26,14 @@ if(isset($_COOKIE['username'])){
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if username is empty
-    if (!isset($_POST["username"])) {
+    if (!isset($_POST["username"]) || $_POST["password"] == "") {
         $username_err = "Please enter username.";
     } else {
         $username = strtolower(trim($_POST["username"]));
     }
 
     // Check if password is empty
-    if (!isset($_POST["password"])) {
+    if (!isset($_POST["password"]) || $_POST["password"] == "") {
         $password_err = "Please enter your password.";
     } else {
         $password = trim($_POST["password"]);
@@ -66,12 +66,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         } else {
                             // Display an error message if password is not valid
-                            $password_err = "The password you entered was not valid.";
+                            $password_err = "The username or password did not match our records.";
                         }
                     }
                 } else {
                     // Display an error message if username doesn't exist
-                    $username_err = "No account found with that username.";
+                    $username_err = "The username or password did not match our records.";
                 }
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
