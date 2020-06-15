@@ -19,10 +19,10 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
                 <h2 class="active"> Sign In </h2>
                 <h2 class="inactive underlineHover">Sign Up </h2>
 
-                <!-- Icon -->
-                <div class="fadeIn first">
-                    <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-                </div>
+
+<!--                <div class="fadeIn first">-->
+<!--                    <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />-->
+<!--                </div>-->
 
                 <!-- Login Form -->
                 <form>
