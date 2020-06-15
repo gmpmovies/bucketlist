@@ -7,6 +7,7 @@ require_once "/home1/gobinitc/public_html/bucketlist/actions/login.php";
 <head>
     <title>Login</title>
     <?php require_once "/home1/gobinitc/public_html/bucketlist/html_style_head.php"?>
+    <link rel="stylesheet" href="/bucketlist/assets/styles/login.css">
 </head>
 <body>
 <?php require_once "/home1/gobinitc/public_html/bucketlist/navbar.php"; ?>
