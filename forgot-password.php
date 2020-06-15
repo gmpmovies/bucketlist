@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $firstname = $first_name;
                     }
                 } else {
-                    $status = "An error occurred fetching your account";
+                    $status = "An existing account was not found with that info.";
                     $valid_config = false;
                 }
             } else {
@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <input type="text" id="email" class="fadeIn first" name="email" placeholder="enter your username or email">
             <input type="submit" class="fadeIn second" value="Send Email">
-            <span class="help-block d-block" style="color:red;"><?php #echo $status; ?></span>
+            <span class="help-block d-block" style="color:red;"><?php echo $status; ?></span>
         </form>
 
     </div>
