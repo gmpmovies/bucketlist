@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     while($stmt->fetch()){
                         $to_email = $email;
                         $firstname = $first_name;
-                        PasswordReset::requestResetCode($id, $username);
+                        $url_code = PasswordReset::requestResetCode($id, $username);
                     }
                 } else {
                     $status = "An existing account was not found with that info.";
@@ -45,12 +45,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
-    if($valid_config && $to_email != ""){
+    if($valid_config && $to_email != "" && $url_code != false){
         $headers = "From: Gobinit Support <support@gobinit.com>\r\n" . "Content-type:text/html;charset=UTF-8" . "\r\n";
         $subject = "Gobinit Password Reset";
         $from = "support@gobinit.com";
-        $email = new SendEmail($email, $subject, $from, $headers, $firstname);
+        $url = "https://www.gobinit.com/bucketlist/test?testvar=" . $url_code;
+        $email = new SendEmail($email, $subject, $from, $headers, $firstname, $url);
         $email->SendEmailFromTemplate();
+    } else {
+        $status = "Something went wrong";
     }
 }
 ?>

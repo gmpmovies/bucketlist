@@ -7,14 +7,16 @@ class SendEmail{
     private $from;
     private $header;
     private $firstname;
+    private $url;
 
-    public function __construct($to, $subject, $from, $header, $firstname = "", $message = 1){
+    public function __construct($to, $subject, $from, $header, $firstname = "", $url="", $message = 1){
         $this->to = $to;
         $this->subject = $subject;
         $this->message = $message;
         $this->from = $from;
         $this->header = $header;
         $this->firstname = $firstname;
+        $this->url = $url;
     }
 
     function SendEmailFromTemplate(){
@@ -24,7 +26,7 @@ class SendEmail{
 
 
 
-    public function getPasswordResetTemplate($firstname){
+    public function getPasswordResetTemplate(){
         $html_template = '
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -352,7 +354,7 @@ class SendEmail{
                                                         <table border="0" cellpadding="0" cellspacing="0" width="50%" class="emailButton" style="background-color: #3498DB;">
                                                             <tr>
                                                                 <td align="center" valign="middle" class="buttonContent" style="padding-top:15px;padding-bottom:15px;padding-right:15px;padding-left:15px;">
-                                                                    <a style="color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="https://www.gobinit.com" target="_blank">Reset Password</a>
+                                                                    <a style="color:#FFFFFF;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:135%;" href="' . $this->url . '" target="_blank">Reset Password</a>
                                                                 </td>
                                                             </tr>
                                                         </table>
