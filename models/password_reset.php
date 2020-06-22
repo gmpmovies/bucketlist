@@ -7,6 +7,31 @@
         public $expiration;
         public $code;
 
+        public static function isValidResetCode($account_id, $code){
+            global $mysqli;
+            $sql = "SELECT id, user_id, code, experation
+                    FROM password_reset
+                    WHERE id = ? AND code = ?";
+
+            if($stmt = $mysqli->prepare($sql)){
+                $stmt->bind_param("is", $param_id, $param_code);
+                $param_id = $account_id;
+                $param_code = $code;
+
+                if($stmt->execute()){
+                    $stmt->store_result();
+                    if($stmt->num_rows == 1){
+                        return true;
+                    }
+                } else {
+                    error_log($stmt->error);
+                }
+            } else {
+                error_log($mysqli->error);
+            }
+            return false;
+        }
+
         public static function requestResetCode($id, $username){
             global $mysqli;
             $success = false;
