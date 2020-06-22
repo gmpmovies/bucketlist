@@ -4,6 +4,7 @@
     $account_id = $_GET["acc"];
     $verification_key = $_GET["val"];
 
+    error_log("Test");
     $is_valid = PasswordReset::isValidResetCode($account_id, $verification_key);
 
     echo "is valid " . $is_valid;
