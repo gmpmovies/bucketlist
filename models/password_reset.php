@@ -11,7 +11,7 @@
             global $mysqli;
             $sql = "SELECT id, user_id, code, experation
                     FROM password_reset
-                    WHERE id = ? AND code = ?";
+                    WHERE user_id = ? AND code = ?";
 
             if($stmt = $mysqli->prepare($sql)){
                 $stmt->bind_param("is", $param_id, $param_code);
