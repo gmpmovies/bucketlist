@@ -33,8 +33,6 @@ if($user->get_id() != $_SESSION['id']){
 $date = date_create($user->get_created_at());
 
 
-error_log("I AM WRITING SOMETHING NEW HERE");
-
 ?>
 
 <!DOCTYPE html>

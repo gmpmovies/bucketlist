@@ -59,9 +59,8 @@ class UploadImage{
             $this->validateRepeatedFilenames();
             $this->uploadPath = $this->currentDir . $this->uploadDirectory . basename($this->fileName);
             $this->converted_upload_path = $this->currentDir . $this->uploadDirectory . $this->converted_file_name . '.jpeg';
-            error_log(exec('whoami'));
+
             $didUpload = move_uploaded_file($this->fileTmpName, $this->uploadPath);
-            error_log("I AM HERE WITH THE DID UPLOAD");
             if($didUpload){
 
                 if($this->fileExtension != 'jpeg'){
