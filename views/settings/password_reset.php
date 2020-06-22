@@ -37,7 +37,7 @@
                     ";
                 } else {
                     echo "
-                        <h1>Ooops, looks like the link you entered has expired or doesn't exist</h1>
+                        <h1 style='font-size: 15px;'>Ooops, looks like the link you entered has expired or doesn't exist</h1>
                     ";
                 }
 
