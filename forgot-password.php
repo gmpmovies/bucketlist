@@ -1,6 +1,8 @@
 <?php
 require_once "/home1/gobinitc/public_html/bucketlist/config.php";
 require_once "/home1/gobinitc/public_html/bucketlist/actions/send_email.php";
+require_once "/home1/gobinitc/public_html/bucketlist/models/password_reset.php";
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $to_email = "";
     $status = "";
@@ -13,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     if($valid_config){
-        $sql = "SELECT email, firstname FROM users WHERE email = ? OR username = ?";
+        $sql = "SELECT id, username, email, firstname FROM users WHERE email = ? OR username = ?";
         if($stmt = $mysqli->prepare($sql)){
             $stmt->bind_param("ss", $param_email, $param_username);
             $param_email = $_POST["email"];
@@ -22,10 +24,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $stmt->store_result();
 
                 if($stmt->num_rows == 1){
-                    $stmt->bind_result($email, $first_name);
+                    $stmt->bind_result($id, $username, $email, $first_name);
                     while($stmt->fetch()){
                         $to_email = $email;
                         $firstname = $first_name;
+                        PasswordReset::requestResetCode($id, $username);
                     }
                 } else {
                     $status = "An existing account was not found with that info.";
