@@ -37,7 +37,7 @@
             $sql = "INSERT INTO password_reset (user_id, expiration, code) VALUES (?,?,?)";
 
             if($stmt = $mysqli->prepare($sql)){
-                $stmt->bind_param("isi", $param_id, $param_exp, $param_code);
+                $stmt->bind_param("iss", $param_id, $param_exp, $param_code);
                 $param_id = $id;
                 $param_exp = $expiration_time;
                 $param_code = $url_code;
@@ -57,7 +57,7 @@
             $expiration_time = date("Y/m/d H:i:s", strtotime("+30 minutes"));
             $sql = "UPDATE password_reset SET expiration = ?, code = ? WHERE user_id = ?";
             if($stmt = $mysqli->prepare($sql)){
-                $stmt->bind_param('sii', $param_expiration, $param_code, $param_user_id);
+                $stmt->bind_param('ssi', $param_expiration, $param_code, $param_user_id);
                 $param_expiration = $expiration_time;
                 $param_code = $url_code;
                 $param_user_id = $user_id;
