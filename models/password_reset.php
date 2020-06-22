@@ -18,6 +18,9 @@
                 $param_id = $account_id;
                 $param_code = $code;
 
+                error_log($param_code);
+                error_log($param_id);
+
                 if($stmt->execute()){
                     $stmt->store_result();
                     if($stmt->num_rows == 1){
