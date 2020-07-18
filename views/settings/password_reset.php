@@ -1,5 +1,4 @@
 <?php
-error_log("Test");
     require_once "/home1/gobinitc/public_html/bucketlist/models/password_reset.php";
 
     $account_id = $_GET["acc"];

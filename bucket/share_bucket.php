@@ -32,7 +32,7 @@ $temp = array();
     <div class="row">
         <div class="col-md-4 col-sm-12">
             <div class="feed-container">
-                <?php echo"<a class='btn btn-secondary btn-small' style='margin-left:10px;' href='/bucket/bucket.php?bucketid=". $bucket_id . "'>Back</a>" ?>
+                <?php echo"<a class='btn btn-secondary btn-small' style='margin-left:10px;' href='/bucketlist/bucket/bucket.php?bucketid=". $bucket_id . "'>Back</a>" ?>
                 <hr>
                 <div class="outline-container" style="text-align: center;">
                     <h1 style="font-size: 22px;">Active Members</h1>
@@ -42,11 +42,11 @@ $temp = array();
                         echo "
                         <div class=\"profile_container\" style='margin-bottom: 10px;'>
                             <div class=\"profile_pic_container\">
-                            <a href='/account.php?userid=" . $member->get_id() . "'>
-                                <img src='/uploads/" . $member->get_File()->get_filename() . "' class=\"profile_pic\" />
+                            <a href='/bucketlist/account.php?userid=" . $member->get_id() . "'>
+                                <img src='/bucketlist/uploads/" . $member->get_File()->get_filename() . "' class=\"profile_pic\" />
                             </a>
                             </div>
-                            <a class='verticle_align_bottom' href='/account.php?userid=" . $member->get_id() . "' class='profile-name'>" . $member->get_firstname() . " " . $member->get_lastname() . "</a>
+                            <a class='verticle_align_bottom' href='/bucketlist/account.php?userid=" . $member->get_id() . "' class='profile-name'>" . $member->get_firstname() . " " . $member->get_lastname() . "</a>
                         </div>";
                     }
                     ?>
@@ -74,13 +74,13 @@ $temp = array();
                             <div class='row'>
                                 <div class='col-2'>
                                     <div class=\"profile_pic_container_search\">
-                                    <a href='/account.php?userid=" . $invitee->get_id() . "'>
-                                        <img src='/uploads/" . $invitee->get_File()->get_filename() . "' class=\"profile_pic\" />
+                                    <a href='/bucketlist/account.php?userid=" . $invitee->get_id() . "'>
+                                        <img src='/bucketlist/uploads/" . $invitee->get_File()->get_filename() . "' class=\"profile_pic\" />
                                     </a>
                                     </div>
                                 </div>
                                 <div class='col-6'>
-                                    <a class='text-ellipsis' href='/account.php?userid=" . $invitee->get_id() . "'>" . $invitee->get_firstname() . " " . $invitee->get_lastname() . "</a>
+                                    <a class='text-ellipsis' href='/bucketlist/account.php?userid=" . $invitee->get_id() . "'>" . $invitee->get_firstname() . " " . $invitee->get_lastname() . "</a>
                                     <p class='username text-ellipsis'>@" . $invitee->get_username() . "</p>
                                 </div>
                                 <div class='col-4'>
